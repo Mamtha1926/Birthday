@@ -4,426 +4,714 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Thangam ❤️</title>
+
+<title>Happy Birthday Tamilshan 🎀</title>
 
 <style>
+
+/* =====================================================
+   MAMMU'S BIRTHDAY STORYBOOK
+   ===================================================== */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html, body {
-    width: 100%;
-    min-height: 100%;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
+    min-height: 100vh;
+    overflow: hidden;
     font-family: Georgia, "Times New Roman", serif;
-    background: #120914;
-    color: #fff8fb;
-    overflow-x: hidden;
+
+    color: #5c4050;
+
+    background:
+        radial-gradient(circle at 20% 20%, #fff8f2 0%, transparent 35%),
+        radial-gradient(circle at 80% 30%, #fce8f0 0%, transparent 35%),
+        linear-gradient(135deg, #fff7ef, #fde9f0, #eee5f7);
 }
 
-/* ---------- PAGE SYSTEM ---------- */
+
+/* =====================================================
+   STORY PAGES
+   ===================================================== */
 
 .page {
     display: none;
-    min-height: 100vh;
+
     width: 100%;
-    padding: 45px 22px;
-    justify-content: center;
+    height: 100vh;
+
+    min-height: 600px;
+
+    padding: 35px 20px;
+
     align-items: center;
+    justify-content: center;
+
     text-align: center;
+
     position: relative;
-    overflow: hidden;
+
+    overflow-y: auto;
 }
 
 .page.active {
     display: flex;
+
     animation: pageIn .7s ease;
 }
 
 @keyframes pageIn {
+
     from {
         opacity: 0;
-        transform: translateY(25px);
+        transform: translateX(35px);
     }
+
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
     }
 }
 
-/* ---------- BACKGROUNDS ---------- */
 
-.p1 {
-    background:
-        radial-gradient(circle at 50% 35%, #7d3b58, #24101f 45%, #10080f);
+/* =====================================================
+   CONTENT
+   ===================================================== */
+
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: auto;
 }
 
-.p2 {
-    background:
-        radial-gradient(circle at 30% 30%, #61334d, #160b15 65%);
-}
+.eyebrow {
 
-.p3 {
-    background:
-        radial-gradient(circle at 70% 30%, #78405a, #170a15 65%);
-}
-
-.p4 {
-    background:
-        linear-gradient(135deg, #21101d, #4b2337, #160a14);
-}
-
-.p5 {
-    background:
-        radial-gradient(circle at center, #4e2940, #130912 70%);
-}
-
-.p6 {
-    background:
-        radial-gradient(circle at 50% 40%, #6d3150, #160a14 70%);
-}
-
-.p7 {
-    background:
-        linear-gradient(180deg, #130a13, #2a1323);
-}
-
-.p8 {
-    background:
-        radial-gradient(circle at center, #472239, #110810);
-}
-
-.p9 {
-    background:
-        radial-gradient(circle at center, #75344f, #160911 70%);
-}
-
-.p10 {
-    background:
-        radial-gradient(circle at center, #8b405e, #2b1021 35%, #0e070d 80%);
-}
-
-/* ---------- TYPOGRAPHY ---------- */
-
-.small {
     font-family: Arial, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 4px;
+
     font-size: 11px;
-    opacity: .7;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: #a56d84;
+
     margin-bottom: 18px;
 }
 
 h1 {
-    font-size: clamp(45px, 12vw, 78px);
+
+    font-size: clamp(42px, 11vw, 76px);
+
     line-height: 1.02;
+
+    color: #75475d;
+
+    margin-bottom: 25px;
 }
 
 h2 {
-    font-size: clamp(31px, 8vw, 50px);
+
+    font-size: clamp(31px, 8vw, 52px);
+
+    color: #75475d;
+
+    line-height: 1.15;
+
     margin-bottom: 22px;
 }
 
 h3 {
-    font-size: 24px;
+
+    color: #80536a;
+
+    font-size: 23px;
+
     margin-bottom: 12px;
 }
 
 p {
-    max-width: 650px;
+
     font-size: 18px;
-    line-height: 1.75;
-    opacity: .92;
+
+    line-height: 1.8;
+
+    max-width: 650px;
+
+    margin: 0 auto;
 }
 
-.container {
-    width: 100%;
-    max-width: 720px;
-    margin: auto;
-}
 
-/* ---------- BUTTONS ---------- */
+/* =====================================================
+   BUTTONS
+   ===================================================== */
 
 .buttons {
+
     display: flex;
+
     flex-wrap: wrap;
+
     justify-content: center;
+
     gap: 13px;
+
     margin-top: 30px;
 }
 
 button {
-    border: 1px solid rgba(255,255,255,.3);
-    background: rgba(255,255,255,.09);
-    color: white;
-    padding: 14px 24px;
-    border-radius: 50px;
-    font-size: 16px;
+
     font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    color: #744b5e;
+
+    background: rgba(255,255,255,.75);
+
+    border: 1px solid #e8bfd0;
+
+    padding: 14px 25px;
+
+    border-radius: 50px;
+
     cursor: pointer;
+
+    box-shadow: 0 8px 25px rgba(120,70,95,.08);
+
     transition: .25s;
 }
 
 button:hover {
-    transform: translateY(-3px);
-    background: rgba(255,255,255,.18);
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 12px 30px rgba(120,70,95,.15);
+
+    background: white;
 }
 
 .primary {
-    background: #d65b7d;
-    border-color: #d65b7d;
+
+    background: #d987a5;
+
+    color: white;
+
+    border-color: #d987a5;
 }
 
 .primary:hover {
-    background: #ec7897;
+
+    background: #c97192;
+
 }
 
-/* ---------- HEART ---------- */
 
-.big-heart {
+/* =====================================================
+   DECORATIVE BUBBLES
+   ===================================================== */
+
+.bubble {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    opacity: .35;
+
+    pointer-events: none;
+}
+
+.b1 {
+
+    width: 130px;
+    height: 130px;
+
+    background: #f6c6d8;
+
+    top: 8%;
+    left: -45px;
+}
+
+.b2 {
+
+    width: 170px;
+    height: 170px;
+
+    background: #d9cef0;
+
+    bottom: -60px;
+    right: -50px;
+}
+
+.b3 {
+
+    width: 75px;
+    height: 75px;
+
+    background: #ffdcae;
+
+    top: 18%;
+    right: 8%;
+}
+
+
+/* =====================================================
+   CUTE ILLUSTRATION PLACEHOLDER
+   ===================================================== */
+
+.illustration {
+
+    width: 190px;
+
+    height: 190px;
+
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
     font-size: 72px;
-    margin-bottom: 18px;
-    animation: heartbeat 1.5s infinite;
-}
 
-@keyframes heartbeat {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.16); }
-}
+    background:
 
-/* ---------- CARTOON ---------- */
+        radial-gradient(circle at 35% 30%, #fff, transparent 28%),
 
-.cartoon {
-    font-size: 95px;
-    margin: 15px 0 25px;
-    animation: float 3s ease-in-out infinite;
+        linear-gradient(145deg, #ffdce7, #e9dafa);
+
+    box-shadow:
+
+        0 20px 45px rgba(120,70,95,.12),
+
+        inset 0 0 0 8px rgba(255,255,255,.45);
+
+    animation: float 3.5s ease-in-out infinite;
 }
 
 @keyframes float {
-    0%,100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
 }
 
-/* ---------- CARDS ---------- */
 
-.card {
-    width: 100%;
+/* =====================================================
+   QUESTION CARD
+   ===================================================== */
+
+.question-card {
+
     max-width: 650px;
+
     margin: 25px auto;
+
     padding: 30px 24px;
-    border-radius: 28px;
-    background: rgba(255,255,255,.06);
-    border: 1px solid rgba(255,255,255,.1);
-    box-shadow: 0 20px 60px rgba(0,0,0,.2);
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.68);
+
+    border: 1px solid rgba(220,170,190,.5);
+
+    box-shadow: 0 20px 50px rgba(100,60,80,.09);
 }
 
 .answer {
-    min-height: 35px;
+
+    min-height: 30px;
+
     margin-top: 22px;
-    color: #ffc3d3;
-    font-size: 19px;
+
+    color: #a45676;
+
+    font-weight: bold;
 }
 
-/* ---------- TIMELINE ---------- */
 
-.timeline {
+/* =====================================================
+   STORYBOOK PAPER
+   ===================================================== */
+
+.paper {
+
+    max-width: 690px;
+
+    margin: 25px auto;
+
+    padding: 38px 28px;
+
     text-align: left;
-    margin-top: 30px;
+
+    background: #fffaf5;
+
+    border-radius: 10px;
+
+    box-shadow: 0 18px 45px rgba(100,60,70,.12);
+
+    position: relative;
 }
 
-.year {
-    margin: 14px 0;
-    padding: 22px;
-    border-left: 3px solid #df718f;
-    background: rgba(255,255,255,.05);
-    border-radius: 0 20px 20px 0;
+.paper::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 10px;
+
+    border: 1px dashed #e5b9c8;
+
+    pointer-events: none;
 }
 
-.year span {
+.paper p {
+
+    position: relative;
+
+    margin-bottom: 18px;
+}
+
+
+/* =====================================================
+   FOUR YEAR CARDS
+   ===================================================== */
+
+.year-card {
+
+    background: rgba(255,255,255,.65);
+
+    border-radius: 25px;
+
+    padding: 25px;
+
+    margin: 15px auto;
+
+    max-width: 680px;
+
+    border: 1px solid rgba(220,180,195,.5);
+
+    text-align: left;
+}
+
+.year-number {
+
     font-family: Arial, sans-serif;
+
     font-size: 11px;
+
     letter-spacing: 3px;
-    color: #ffb3c8;
+
+    color: #ad7189;
+
+    margin-bottom: 7px;
 }
 
-/* ---------- MEMORY CARDS ---------- */
 
-.memory-grid {
+/* =====================================================
+   MEMORY GALLERY
+   ===================================================== */
+
+.gallery {
+
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
-    gap: 13px;
-    margin-top: 28px;
+
+    gap: 15px;
+
+    max-width: 650px;
+
+    margin: 25px auto;
 }
 
-.memory {
-    min-height: 150px;
-    padding: 25px 12px;
+.photo {
+
+    aspect-ratio: 1 / 1;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #f9dce6,
+
+            #eee3f7
+
+        );
+
+    border: 9px solid white;
+
+    border-radius: 8px;
+
+    box-shadow: 0 10px 25px rgba(90,50,70,.12);
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     flex-direction: column;
-    border-radius: 22px;
-    background: rgba(255,255,255,.07);
-    border: 1px solid rgba(255,255,255,.1);
+
+    color: #a06b82;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    transform: rotate(-1deg);
+}
+
+.photo:nth-child(even) {
+
+    transform: rotate(1.5deg);
+}
+
+
+/* =====================================================
+   LOVE LIST
+   ===================================================== */
+
+.love-item {
+
+    background: rgba(255,255,255,.68);
+
+    border-radius: 20px;
+
+    padding: 18px 22px;
+
+    margin: 11px auto;
+
+    max-width: 650px;
+
+    text-align: left;
+
+    border: 1px solid rgba(220,180,195,.45);
+
+    transition: .25s;
+}
+
+.love-item:hover {
+
+    transform: translateX(6px);
+}
+
+
+/* =====================================================
+   ENVELOPE
+   ===================================================== */
+
+.envelope {
+
+    width: 220px;
+
+    height: 145px;
+
+    margin: 25px auto;
+
+    background: #e9a8bb;
+
+    border-radius: 8px;
+
+    position: relative;
+
+    box-shadow: 0 20px 40px rgba(100,50,70,.16);
+
     cursor: pointer;
+
     transition: .3s;
 }
 
-.memory:hover {
-    transform: scale(1.03);
+.envelope:hover {
+
+    transform: translateY(-6px) rotate(-1deg);
 }
 
-.memory-icon {
-    font-size: 42px;
-    margin-bottom: 10px;
+.envelope::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 110px solid transparent;
+    border-right: 110px solid transparent;
+
+    border-top: 75px solid #d987a5;
 }
 
-/* ---------- LOVE LIST ---------- */
 
-.love-list {
-    margin-top: 25px;
-}
+/* =====================================================
+   FINAL
+   ===================================================== */
 
-.love {
-    padding: 18px 20px;
-    margin: 11px 0;
-    border-radius: 18px;
-    background: rgba(255,255,255,.06);
-    text-align: left;
-    font-size: 18px;
-}
+.final-title {
 
-/* ---------- LETTER ---------- */
+    color: #75475d;
 
-.letter {
-    text-align: left;
-    line-height: 2;
-}
+    font-size: clamp(40px, 10vw, 70px);
 
-.letter p {
-    margin-bottom: 20px;
+    line-height: 1.05;
 }
 
 .signature {
-    text-align: right;
-    font-style: italic;
-    color: #ffb4c9;
-}
 
-/* ---------- FINAL ---------- */
-
-.final-heart {
-    font-size: 75px;
-    animation: heartbeat 1.5s infinite;
-    margin-bottom: 20px;
-}
-
-.final-message {
-    font-size: 22px;
-    line-height: 1.9;
-    margin-top: 20px;
-}
-
-.big-final {
-    font-size: clamp(28px, 7vw, 45px);
     margin-top: 25px;
-    color: #ffc2d2;
+
+    font-style: italic;
+
+    color: #a75b78;
+
+    font-size: 22px;
 }
 
-/* ---------- FLOATING HEARTS ---------- */
 
-.float-heart {
+/* =====================================================
+   PAGE DOTS
+   ===================================================== */
+
+.progress {
+
     position: fixed;
-    bottom: -40px;
-    pointer-events: none;
-    opacity: 0;
-    animation: rise 8s linear infinite;
-    z-index: 10;
+
+    bottom: 18px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 5px;
+
+    z-index: 100;
 }
 
-@keyframes rise {
-    0% {
-        transform: translateY(0) rotate(0);
-        opacity: 0;
-    }
-    15% {
-        opacity: .7;
-    }
-    100% {
-        transform: translateY(-110vh) rotate(360deg);
-        opacity: 0;
-    }
+.dot {
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: rgba(120,70,95,.25);
+
 }
 
-/* ---------- MOBILE ---------- */
+.dot.active {
+
+    width: 18px;
+
+    border-radius: 10px;
+
+    background: #c77d99;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
 
 @media(max-width:600px) {
 
     .page {
-        padding: 38px 18px;
-    }
 
-    .memory-grid {
-        grid-template-columns: 1fr 1fr;
+        padding: 30px 17px 55px;
+
     }
 
     p {
-        font-size: 17px;
+
+        font-size: 16.5px;
+
     }
 
-    button {
-        width: auto;
+    .illustration {
+
+        width: 155px;
+
+        height: 155px;
+
+        font-size: 60px;
+
     }
+
+    .paper {
+
+        padding: 30px 20px;
+
+    }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
-<!-- FLOATING HEARTS -->
 
-<div class="float-heart" style="left:8%;animation-delay:0s;">❤️</div>
-<div class="float-heart" style="left:30%;animation-delay:2s;">💗</div>
-<div class="float-heart" style="left:55%;animation-delay:4s;">♡</div>
-<div class="float-heart" style="left:80%;animation-delay:1s;">❤️</div>
+<!-- =====================================================
+     PAGE 1
+     ===================================================== -->
 
+<section class="page active p1">
 
-<!-- ================================================= -->
-<!-- PAGE 1 -->
-<!-- ================================================= -->
-
-<section class="page p1 active" id="page1">
+<div class="bubble b1"></div>
+<div class="bubble b2"></div>
+<div class="bubble b3"></div>
 
 <div class="container">
 
-<div class="big-heart">❤️</div>
+<div class="illustration">
+🎂
+</div>
 
-<div class="small">
-A secret birthday surprise
+<div class="eyebrow">
+A little surprise from Mammu
 </div>
 
 <h1>
 Happy Birthday<br>
-Thangam
+Tamilshan
 </h1>
 
-<p style="margin:25px auto;">
-Someone very special made this little corner of the internet
-just for you...
-</p>
-
 <p>
-<b>Hint:</b> It's your Mammu. 🥹
+Today isn't just another birthday.
+<br>
+It's a tiny celebration of <b>you</b>.
 </p>
 
 <div class="buttons">
+
 <button class="primary" onclick="nextPage()">
-Open my surprise ✨
+Open my surprise 🎀
 </button>
+
 </div>
 
 </div>
@@ -431,346 +719,198 @@ Open my surprise ✨
 </section>
 
 
-<!-- ================================================= -->
-<!-- PAGE 2 -->
-<!-- ================================================= -->
+<!-- =====================================================
+     PAGE 2
+     ===================================================== -->
 
-<section class="page p2" id="page2">
+<section class="page">
 
 <div class="container">
 
-<div class="cartoon">🥰💝🥳</div>
+<div class="illustration">
+💌
+</div>
 
-<div class="small">
-Question no. 1
+<div class="eyebrow">
+Before we begin
 </div>
 
 <h2>
-Do you think you're my favourite person?
+Are you ready?
 </h2>
 
 <p>
-Choose carefully, Thangam. 😏
+Because once you enter...
+there's no escaping Mammu. 😂
 </p>
 
 <div class="buttons">
 
-<button onclick="answer2('yes')">
-YES 😌❤️
+<button class="primary" onclick="nextPage()">
+YES ❤️
 </button>
 
-<button onclick="answer2('no')">
-NO 😂
+<button onclick="notReady()">
+NO 😌
 </button>
 
 </div>
 
-<div class="answer" id="answer2"></div>
+<div class="answer" id="notReadyAnswer"></div>
 
 </div>
 
 </section>
 
 
-<!-- ================================================= -->
-<!-- PAGE 3 -->
-<!-- ================================================= -->
+<!-- =====================================================
+     PAGE 3
+     ===================================================== -->
 
-<section class="page p3" id="page3">
+<section class="page">
 
 <div class="container">
 
-<div class="cartoon">😤😂❤️</div>
+<div class="illustration">
+😏
+</div>
 
-<div class="small">
+<div class="eyebrow">
+Important question
+</div>
+
+<h2>
+Do you think you're<br>
+Mammu's favourite person?
+</h2>
+
+<div class="question-card">
+
+<div class="buttons">
+
+<button onclick="favourite('yes')">
+Obviously YES ❤️
+</button>
+
+<button onclick="favourite('no')">
+Maybe NO 😂
+</button>
+
+</div>
+
+<div class="answer" id="favouriteAnswer"></div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 4
+     ===================================================== -->
+
+<section class="page">
+
+<div class="container">
+
+<div class="illustration">
+😂
+</div>
+
+<div class="eyebrow">
 Official complaint
 </div>
 
 <h2>
-I have one serious complaint about you...
+I have a complaint
+about you...
 </h2>
 
-<div class="card">
+<div class="question-card">
 
 <p>
 You make <b>way too many silly jokes.</b>
 </p>
 
-<p style="margin-top:18px;">
-And somehow...
-</p>
-
-<p style="margin-top:10px;">
-I still laugh at them. 🙄😂
-</p>
-
-</div>
-
-<div class="buttons">
-
-<button class="primary" onclick="nextPage()">
-Okay, continue 😂
-</button>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================================================= -->
-<!-- PAGE 4 -->
-<!-- ================================================= -->
-
-<section class="page p4" id="page4">
-
-<div class="container">
-
-<div class="small">
-Our story
-</div>
-
-<h2>
-Four Years of Us ❤️
-</h2>
+<br>
 
 <p>
-Four years.
-Four chapters.
-So many memories.
-</p>
-
-<div class="timeline">
-
-<div class="year">
-<span>YEAR 01</span>
-<h3>Where it all began 🌷</h3>
-<p>
-ADD YOUR FIRST-YEAR MEMORY HERE.
-</p>
-</div>
-
-<div class="year">
-<span>YEAR 02</span>
-<h3>Growing together ❤️</h3>
-<p>
-ADD YOUR SECOND-YEAR MEMORY HERE.
-</p>
-</div>
-
-<div class="year">
-<span>YEAR 03</span>
-<h3>More memories ✨</h3>
-<p>
-ADD YOUR THIRD-YEAR MEMORY HERE.
-</p>
-</div>
-
-<div class="year">
-<span>YEAR 04</span>
-<h3>Still choosing you 🥹</h3>
-<p>
-ADD YOUR FOURTH-YEAR MEMORY HERE.
-</p>
-</div>
-
-</div>
-
-<div class="buttons">
-<button class="primary" onclick="nextPage()">
-Continue ❤️
-</button>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================================================= -->
-<!-- PAGE 5 -->
-<!-- ================================================= -->
-
-<section class="page p5" id="page5">
-
-<div class="container">
-
-<div class="small">
-Memory machine
-</div>
-
-<h2>
-Choose a Memory 📸
-</h2>
-
-<p>
-Which one do you want to open?
-</p>
-
-<div class="memory-grid">
-
-<div class="memory" onclick="memory('favourite')">
-<div class="memory-icon">🥰</div>
-<b>Favourite</b>
-</div>
-
-<div class="memory" onclick="memory('funny')">
-<div class="memory-icon">😂</div>
-<b>Funniest</b>
-</div>
-
-<div class="memory" onclick="memory('romantic')">
-<div class="memory-icon">❤️</div>
-<b>Most romantic</b>
-</div>
-
-<div class="memory" onclick="memory('special')">
-<div class="memory-icon">🥹</div>
-<b>Never forget</b>
-</div>
-
-</div>
-
-<div class="card" id="memoryResult" style="display:none;"></div>
-
-<div class="buttons">
-<button class="primary" onclick="nextPage()">
-Next surprise ✨
-</button>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================================================= -->
-<!-- PAGE 6 -->
-<!-- ================================================= -->
-
-<section class="page p6" id="page6">
-
-<div class="container">
-
-<div class="cartoon">💘😏💘</div>
-
-<div class="small">
-Important research
-</div>
-
-<h2>
-The Mammu–Thangam Love Quiz
-</h2>
-
-<p>
-Let's see how well you know your girlfriend. 😌
-</p>
-
-<div class="card">
-
-<h3>
-Who loves whom more?
-</h3>
-
-<div class="buttons">
-
-<button onclick="quiz('mammu')">
-Mammu ❤️
-</button>
-
-<button onclick="quiz('thangam')">
-Thangam ❤️
-</button>
-
-</div>
-
-<div class="answer" id="quizAnswer"></div>
-
-</div>
-
-<div class="card">
-
-<h3>
-Who is more dramatic? 😂
-</h3>
-
-<div class="buttons">
-
-<button onclick="quiz2('mammu')">
-Mammu
-</button>
-
-<button onclick="quiz2('thangam')">
-Thangam
-</button>
-
-</div>
-
-<div class="answer" id="quizAnswer2"></div>
-
-</div>
-
-<div class="buttons">
-<button class="primary" onclick="nextPage()">
-Okay okay... enough 😂
-</button>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================================================= -->
-<!-- PAGE 7 -->
-<!-- ================================================= -->
-
-<section class="page p7" id="page7">
-
-<div class="container">
-
-<div class="small">
-Okay...
-</div>
-
-<h2>
-Enough teasing. 🥹
-</h2>
-
-<div class="cartoon">
-🤍🫂🤍
-</div>
-
-<div class="card">
-
-<p>
-Behind all the jokes, teasing and nonsense...
-there are some things I really want you to know.
+And the worst part?
 </p>
 
 <br>
+
+<p>
+<b>I actually laugh at them.</b> 🙄
+</p>
+
+</div>
+
+<div class="buttons">
+
+<button class="primary" onclick="nextPage()">
+Continue 😂
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 5
+     ===================================================== -->
+
+<section class="page">
+
+<div class="container">
+
+<div class="illustration">
+🌷
+</div>
+
+<div class="eyebrow">
+Once upon a time...
+</div>
+
+<h2>
+And then there was us.
+</h2>
+
+<div class="paper">
+
+<p>
+This is where our story begins.
+</p>
 
 <p>
 <b>
-ADD YOUR PERSONAL MESSAGE ABOUT HIS HARD WORK,
-PASSION, SUPPORT, AND THE THINGS YOU ADMIRE ABOUT HIM HERE.
+WRITE HOW YOU BOTH MET / HOW YOUR STORY STARTED HERE.
 </b>
 </p>
 
-<br>
+<p>
+Maybe it wasn't a perfect beginning.
+Maybe we didn't know where it would take us.
+</p>
 
 <p>
-I hope you never forget how proud I am of you.
-❤️
+But somehow...
+we became <b>us.</b> ❤️
 </p>
 
 </div>
 
 <div class="buttons">
+
 <button class="primary" onclick="nextPage()">
-Read my letter 💌
+Turn the page 🌸
 </button>
+
 </div>
 
 </div>
@@ -778,61 +918,452 @@ Read my letter 💌
 </section>
 
 
-<!-- ================================================= -->
-<!-- PAGE 8 -->
-<!-- ================================================= -->
+<!-- =====================================================
+     PAGE 6 — YEAR 1
+     ===================================================== -->
 
-<section class="page p8" id="page8">
+<section class="page">
 
 <div class="container">
 
-<div class="small">
+<div class="illustration">
+🌱
+</div>
+
+<div class="eyebrow">
+Chapter one
+</div>
+
+<h2>
+Year One
+</h2>
+
+<div class="year-card">
+
+<div class="year-number">
+OUR FIRST YEAR
+</div>
+
+<h3>
+The beginning ❤️
+</h3>
+
+<p>
+<b>
+ADD YOUR FIRST-YEAR MEMORY HERE.
+</b>
+</p>
+
+</div>
+
+<div class="buttons">
+
+<button class="primary" onclick="nextPage()">
+Next chapter →
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 7 — YEAR 2
+     ===================================================== -->
+
+<section class="page">
+
+<div class="container">
+
+<div class="illustration">
+🌸
+</div>
+
+<div class="eyebrow">
+Chapter two
+</div>
+
+<h2>
+Year Two
+</h2>
+
+<div class="year-card">
+
+<div class="year-number">
+OUR SECOND YEAR
+</div>
+
+<h3>
+Growing together 🌷
+</h3>
+
+<p>
+<b>
+ADD YOUR SECOND-YEAR MEMORY HERE.
+</b>
+</p>
+
+</div>
+
+<div class="buttons">
+
+<button class="primary" onclick="nextPage()">
+Next chapter →
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 8 — YEAR 3
+     ===================================================== -->
+
+<section class="page">
+
+<div class="container">
+
+<div class="illustration">
+✨
+</div>
+
+<div class="eyebrow">
+Chapter three
+</div>
+
+<h2>
+Year Three
+</h2>
+
+<div class="year-card">
+
+<div class="year-number">
+OUR THIRD YEAR
+</div>
+
+<h3>
+More memories ✨
+</h3>
+
+<p>
+<b>
+ADD YOUR THIRD-YEAR MEMORY HERE.
+</b>
+</p>
+
+</div>
+
+<div class="buttons">
+
+<button class="primary" onclick="nextPage()">
+Next chapter →
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 9 — YEAR 4
+     ===================================================== -->
+
+<section class="page">
+
+<div class="container">
+
+<div class="illustration">
+🥹
+</div>
+
+<div class="eyebrow">
+Chapter four
+</div>
+
+<h2>
+Year Four
+</h2>
+
+<div class="year-card">
+
+<div class="year-number">
+OUR FOURTH YEAR
+</div>
+
+<h3>
+Still choosing you ❤️
+</h3>
+
+<p>
+<b>
+ADD YOUR FOURTH-YEAR MEMORY HERE.
+</b>
+</p>
+
+</div>
+
+<div class="buttons">
+
+<button class="primary" onclick="nextPage()">
+Keep going ❤️
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 10 — GALLERY
+     ===================================================== -->
+
+<section class="page">
+
+<div class="container">
+
+<div class="eyebrow">
+Our little memories
+</div>
+
+<h2>
+A few pieces of us 📸
+</h2>
+
+<p>
+Every picture has a story.
+</p>
+
+<div class="gallery">
+
+<div class="photo">
+PHOTO 1
+<br><br>
+📷
+</div>
+
+<div class="photo">
+PHOTO 2
+<br><br>
+📷
+</div>
+
+<div class="photo">
+PHOTO 3
+<br><br>
+📷
+</div>
+
+<div class="photo">
+PHOTO 4
+<br><br>
+📷
+</div>
+
+<div class="photo">
+PHOTO 5
+<br><br>
+📷
+</div>
+
+<div class="photo">
+PHOTO 6
+<br><br>
+📷
+</div>
+
+</div>
+
+<div class="buttons">
+
+<button class="primary" onclick="nextPage()">
+More of us ❤️
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 11 — FUNNY
+     ===================================================== -->
+
+<section class="page">
+
+<div class="container">
+
+<div class="illustration">
+🙄😂
+</div>
+
+<div class="eyebrow">
+Things Mammu has noticed
+</div>
+
+<h2>
+Things you do that
+drive me crazy
+</h2>
+
+<div class="love-item">
+Your silly jokes 😂
+</div>
+
+<div class="love-item">
+Your annoying little habits 🙄
+</div>
+
+<div class="love-item">
+The way you tease me 😤
+</div>
+
+<div class="love-item">
+<b>ADD YOUR OWN FUNNY THING HERE</b>
+</div>
+
+<div class="buttons">
+
+<button class="primary" onclick="nextPage()">
+But I still love you 😂❤️
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 12 — LOVE
+     ===================================================== -->
+
+<section class="page">
+
+<div class="container">
+
+<div class="illustration">
+🤍
+</div>
+
+<div class="eyebrow">
+The serious list
+</div>
+
+<h2>
+Things Mammu loves
+about you
+</h2>
+
+<div class="love-item">
+Your <b>hard work</b>.
+</div>
+
+<div class="love-item">
+Your <b>passion</b> for what you do.
+</div>
+
+<div class="love-item">
+The way you make me laugh.
+</div>
+
+<div class="love-item">
+The way you care.
+</div>
+
+<div class="love-item">
+<b>ADD YOUR OWN SPECIAL THING HERE.</b>
+</div>
+
+<div class="buttons">
+
+<button class="primary" onclick="nextPage()">
+There's more... 🥹
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 13 — LETTER
+     ===================================================== -->
+
+<section class="page">
+
+<div class="container">
+
+<div class="eyebrow">
 From my heart
 </div>
 
 <h2>
-Dear Thangam... 💌
+A letter for you 💌
 </h2>
 
-<div class="card letter">
+<div class="envelope" onclick="openLetter()"></div>
 
 <p>
-My Thangam,
+Tap the envelope.
 </p>
 
+<div class="card" id="letterHint" style="display:none;">
+
 <p>
-This is where I want to say everything that I sometimes
-don't know how to say normally.
+<b>Dear Thangam,</b>
 </p>
+
+<br>
+
+<p>
+This is where your real birthday letter will go.
+</p>
+
+<br>
 
 <p>
 <b>
-WRITE YOUR FULL BIRTHDAY LETTER HERE.
+WRITE YOUR FULL PERSONAL BIRTHDAY LETTER HERE.
 </b>
 </p>
 
-<p>
-Tell him about your four years together,
-your favourite memories, what you love about him,
-and everything you wish for him.
-</p>
+<br>
 
 <p>
-No matter how many birthdays come,
-I hope we keep making our own little memories.
+Four years, countless memories,
+and somehow I still get excited
+about making memories with you.
 </p>
+
+<br>
 
 <p class="signature">
-With all my love,<br>
+Love always,<br>
 Mammu ❤️
 </p>
 
 </div>
 
 <div class="buttons">
+
 <button class="primary" onclick="nextPage()">
-One last thing... 🎁
+One last surprise 🎁
 </button>
+
 </div>
 
 </div>
@@ -840,39 +1371,39 @@ One last thing... 🎁
 </section>
 
 
-<!-- ================================================= -->
-<!-- PAGE 9 -->
-<!-- ================================================= -->
+<!-- =====================================================
+     PAGE 14 — LAST QUESTION
+     ===================================================== -->
 
-<section class="page p9" id="page9">
+<section class="page">
 
 <div class="container">
 
-<div class="cartoon">
-🥺👉👈❤️
+<div class="illustration">
+🎁
 </div>
 
-<div class="small">
+<div class="eyebrow">
 One last question
 </div>
 
 <h2>
-Will you stay with your Mammu
+Will you stay with Mammu
 for all the birthdays still to come?
 </h2>
 
 <p>
-Think very carefully. 😌
+Choose wisely. 😌
 </p>
 
 <div class="buttons">
 
-<button class="primary" onclick="finalAnswer()">
+<button class="primary" onclick="finalQuestion()">
 YES ❤️
 </button>
 
-<button class="primary" onclick="finalAnswer()">
-YES, OBVIOUSLY 🙄❤️
+<button class="primary" onclick="finalQuestion()">
+YES, OBVIOUSLY 😂❤️
 </button>
 
 </div>
@@ -884,69 +1415,73 @@ YES, OBVIOUSLY 🙄❤️
 </section>
 
 
-<!-- ================================================= -->
-<!-- PAGE 10 -->
-<!-- ================================================= -->
+<!-- =====================================================
+     PAGE 15 — FINAL
+     ===================================================== -->
 
-<section class="page p10" id="page10">
+<section class="page">
 
 <div class="container">
 
-<div class="final-heart">
-❤️
+<div class="illustration">
+🎂💗
 </div>
 
-<div class="small">
-And finally...
+<div class="eyebrow">
+The end... or maybe just the beginning
 </div>
 
-<h1>
+<div class="final-title">
 Happy Birthday,<br>
-My Thangam
-</h1>
-
-<div class="cartoon">
-🎂🥰🎁
+Tamilshan
 </div>
 
-<div class="card">
+<div class="paper">
 
-<p class="final-message">
+<p>
+My Thangam,
+</p>
 
+<p>
 Four years down...
+</p>
 
-<br><br>
-
+<p>
 and I still choose you.
-
-<br><br>
-
-For all the laughs.<br>
-For all the silly jokes.<br>
-For every difficult day.<br>
-For every beautiful memory.<br>
-For everything that is still waiting for us.
-
 </p>
 
-<div class="big-final">
-I would choose you again. ❤️
-</div>
-
-<p style="margin:25px auto 0;">
-Happy Birthday, Thangam. 🎂
-</p>
-
-<p style="margin:15px auto 0;">
-Forever yours,
+<p>
+For all the laughs.
 <br>
-<b>Mammu ❤️</b>
+For all the silly jokes.
+<br>
+For all the difficult days.
+<br>
+For all the beautiful memories.
+<br>
+For everything that is still waiting for us.
+</p>
+
+<p>
+<b>
+I would choose you again.
+</b>
+</p>
+
+<p>
+Happy Birthday to the person
+who became such a beautiful part of my life.
+</p>
+
+<p class="signature">
+Forever yours,<br>
+Mammu ❤️
 </p>
 
 </div>
 
-<p style="margin-top:30px;font-size:13px;opacity:.55;">
-Made with too much love, obviously. ❤️
+<p style="margin-top:25px;">
+Made with a ridiculous amount of love. 🌷
 </p>
 
 </div>
@@ -954,153 +1489,155 @@ Made with too much love, obviously. ❤️
 </section>
 
 
+<!-- =====================================================
+     PROGRESS DOTS
+     ===================================================== -->
+
+<div class="progress" id="progress"></div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
 <script>
 
-/* ---------- PAGE NAVIGATION ---------- */
+let currentPage = 0;
 
-let currentPage = 1;
+const pages = document.querySelectorAll(".page");
+
+const progress = document.getElementById("progress");
+
+
+/* Create progress dots */
+
+pages.forEach(function(page, index) {
+
+    const dot = document.createElement("div");
+
+    dot.className = "dot";
+
+    if(index === 0) {
+        dot.classList.add("active");
+    }
+
+    progress.appendChild(dot);
+
+});
+
+
+function updateDots() {
+
+    const dots = document.querySelectorAll(".dot");
+
+    dots.forEach(function(dot, index) {
+
+        dot.classList.toggle(
+            "active",
+            index === currentPage
+        );
+
+    });
+
+}
+
 
 function showPage(number) {
 
-    document.querySelectorAll(".page").forEach(function(page) {
+    pages.forEach(function(page) {
+
         page.classList.remove("active");
+
     });
 
-    document.getElementById("page" + number).classList.add("active");
+    pages[number].classList.add("active");
 
     currentPage = number;
 
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+    updateDots();
+
 }
+
 
 function nextPage() {
 
-    if (currentPage < 10) {
+    if(currentPage < pages.length - 1) {
+
         showPage(currentPage + 1);
+
     }
 
 }
 
 
-/* ---------- PAGE 2 ---------- */
+/* PAGE 2 */
 
-function answer2(choice) {
+function notReady() {
 
-    const box = document.getElementById("answer2");
+    const answer =
+        document.getElementById("notReadyAnswer");
 
-    if (choice === "yes") {
+    answer.innerHTML =
+        "Too late 😂 Mammu already said you're coming in.";
 
-        box.innerHTML =
-        "Good answer. 😌❤️ I knew you had common sense. You may continue.";
+}
+
+
+/* PAGE 3 */
+
+function favourite(choice) {
+
+    const answer =
+        document.getElementById("favouriteAnswer");
+
+    if(choice === "yes") {
+
+        answer.innerHTML =
+            "Correct. 😌❤️ You may continue.";
 
         setTimeout(function() {
+
             nextPage();
-        }, 2200);
+
+        }, 1800);
 
     } else {
 
-        box.innerHTML =
-        "EXCUSE ME?! 😂 Wrong answer. Obviously I'm your favourite. Try again!";
+        answer.innerHTML =
+            "Wrong answer! 😂 Try again, Thangam.";
 
     }
 
 }
 
 
-/* ---------- MEMORY MACHINE ---------- */
+/* PAGE 13 */
 
-function memory(type) {
+function openLetter() {
 
-    const box = document.getElementById("memoryResult");
+    const letter =
+        document.getElementById("letterHint");
 
-    box.style.display = "block";
-
-    if (type === "favourite") {
-
-        box.innerHTML =
-        "🥰 <br><br><b>Favourite Memory</b><br><br>ADD YOUR FAVOURITE MEMORY HERE.";
-
-    }
-
-    if (type === "funny") {
-
-        box.innerHTML =
-        "😂 <br><br><b>Funniest Memory</b><br><br>ADD YOUR FUNNIEST MEMORY OR INSIDE JOKE HERE.";
-
-    }
-
-    if (type === "romantic") {
-
-        box.innerHTML =
-        "❤️ <br><br><b>Most Romantic</b><br><br>ADD YOUR MOST ROMANTIC MEMORY HERE.";
-
-    }
-
-    if (type === "special") {
-
-        box.innerHTML =
-        "🥹 <br><br><b>A Memory I'll Never Forget</b><br><br>ADD THAT SPECIAL MEMORY HERE.";
-
-    }
+    letter.style.display = "block";
 
 }
 
 
-/* ---------- LOVE QUIZ ---------- */
+/* PAGE 14 */
 
-function quiz(choice) {
+function finalQuestion() {
 
-    const box = document.getElementById("quizAnswer");
+    const answer =
+        document.getElementById("finalAnswer");
 
-    if (choice === "mammu") {
-
-        box.innerHTML =
-        "Correct. Obviously. 😂❤️";
-
-    } else {
-
-        box.innerHTML =
-        "Nice try. Mammu wins this one. 😌❤️";
-
-    }
-
-}
-
-
-function quiz2(choice) {
-
-    const box = document.getElementById("quizAnswer2");
-
-    if (choice === "thangam") {
-
-        box.innerHTML =
-        "Correct answer! 😂 I knew you'd admit it.";
-
-    } else {
-
-        box.innerHTML =
-        "Hmm... suspicious answer. We'll discuss this later. 😂";
-
-    }
-
-}
-
-
-/* ---------- FINAL QUESTION ---------- */
-
-function finalAnswer() {
-
-    const box = document.getElementById("finalAnswer");
-
-    box.innerHTML =
-    "Good. ❤️ That's the only acceptable answer.";
+    answer.innerHTML =
+        "Good. ❤️ That's the only acceptable answer.";
 
     setTimeout(function() {
-        showPage(10);
-    }, 2200);
+
+        nextPage();
+
+    }, 1800);
 
 }
 
