@@ -4,70 +4,128 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>For My Thangam ❤️</title>
 
 <style>
-
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html, body {
+    width: 100%;
+    min-height: 100%;
 }
 
 body {
-    font-family: Georgia, 'Times New Roman', serif;
-    background: #120b16;
-    color: #fff7fa;
+    font-family: Georgia, "Times New Roman", serif;
+    background: #120914;
+    color: #fff8fb;
     overflow-x: hidden;
 }
 
-/* ---------- BACKGROUND ---------- */
+/* ---------- PAGE SYSTEM ---------- */
 
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background:
-        radial-gradient(circle at 20% 20%, rgba(255,120,160,.15), transparent 30%),
-        radial-gradient(circle at 80% 70%, rgba(180,100,255,.12), transparent 30%);
-    pointer-events: none;
-    z-index: -1;
-}
-
-/* ---------- GENERAL ---------- */
-
-section {
+.page {
+    display: none;
     min-height: 100vh;
-    padding: 80px 22px;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    padding: 45px 22px;
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
+
+.page.active {
+    display: flex;
+    animation: pageIn .7s ease;
+}
+
+@keyframes pageIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- BACKGROUNDS ---------- */
+
+.p1 {
+    background:
+        radial-gradient(circle at 50% 35%, #7d3b58, #24101f 45%, #10080f);
+}
+
+.p2 {
+    background:
+        radial-gradient(circle at 30% 30%, #61334d, #160b15 65%);
+}
+
+.p3 {
+    background:
+        radial-gradient(circle at 70% 30%, #78405a, #170a15 65%);
+}
+
+.p4 {
+    background:
+        linear-gradient(135deg, #21101d, #4b2337, #160a14);
+}
+
+.p5 {
+    background:
+        radial-gradient(circle at center, #4e2940, #130912 70%);
+}
+
+.p6 {
+    background:
+        radial-gradient(circle at 50% 40%, #6d3150, #160a14 70%);
+}
+
+.p7 {
+    background:
+        linear-gradient(180deg, #130a13, #2a1323);
+}
+
+.p8 {
+    background:
+        radial-gradient(circle at center, #472239, #110810);
+}
+
+.p9 {
+    background:
+        radial-gradient(circle at center, #75344f, #160911 70%);
+}
+
+.p10 {
+    background:
+        radial-gradient(circle at center, #8b405e, #2b1021 35%, #0e070d 80%);
+}
+
+/* ---------- TYPOGRAPHY ---------- */
 
 .small {
     font-family: Arial, sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
-    font-size: 12px;
+    font-size: 11px;
     opacity: .7;
     margin-bottom: 18px;
 }
 
 h1 {
-    font-size: clamp(42px, 12vw, 78px);
-    line-height: 1.05;
+    font-size: clamp(45px, 12vw, 78px);
+    line-height: 1.02;
 }
 
 h2 {
-    font-size: clamp(32px, 8vw, 52px);
-    margin-bottom: 25px;
+    font-size: clamp(31px, 8vw, 50px);
+    margin-bottom: 22px;
 }
 
 h3 {
@@ -78,37 +136,221 @@ h3 {
 p {
     max-width: 650px;
     font-size: 18px;
-    line-height: 1.8;
-    opacity: .9;
+    line-height: 1.75;
+    opacity: .92;
 }
 
-.italic {
+.container {
+    width: 100%;
+    max-width: 720px;
+    margin: auto;
+}
+
+/* ---------- BUTTONS ---------- */
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 13px;
+    margin-top: 30px;
+}
+
+button {
+    border: 1px solid rgba(255,255,255,.3);
+    background: rgba(255,255,255,.09);
+    color: white;
+    padding: 14px 24px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: .25s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    background: rgba(255,255,255,.18);
+}
+
+.primary {
+    background: #d65b7d;
+    border-color: #d65b7d;
+}
+
+.primary:hover {
+    background: #ec7897;
+}
+
+/* ---------- HEART ---------- */
+
+.big-heart {
+    font-size: 72px;
+    margin-bottom: 18px;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.16); }
+}
+
+/* ---------- CARTOON ---------- */
+
+.cartoon {
+    font-size: 95px;
+    margin: 15px 0 25px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ---------- CARDS ---------- */
+
+.card {
+    width: 100%;
+    max-width: 650px;
+    margin: 25px auto;
+    padding: 30px 24px;
+    border-radius: 28px;
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.1);
+    box-shadow: 0 20px 60px rgba(0,0,0,.2);
+}
+
+.answer {
+    min-height: 35px;
+    margin-top: 22px;
+    color: #ffc3d3;
+    font-size: 19px;
+}
+
+/* ---------- TIMELINE ---------- */
+
+.timeline {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.year {
+    margin: 14px 0;
+    padding: 22px;
+    border-left: 3px solid #df718f;
+    background: rgba(255,255,255,.05);
+    border-radius: 0 20px 20px 0;
+}
+
+.year span {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #ffb3c8;
+}
+
+/* ---------- MEMORY CARDS ---------- */
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+    margin-top: 28px;
+}
+
+.memory {
+    min-height: 150px;
+    padding: 25px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 22px;
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.1);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.memory:hover {
+    transform: scale(1.03);
+}
+
+.memory-icon {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+/* ---------- LOVE LIST ---------- */
+
+.love-list {
+    margin-top: 25px;
+}
+
+.love {
+    padding: 18px 20px;
+    margin: 11px 0;
+    border-radius: 18px;
+    background: rgba(255,255,255,.06);
+    text-align: left;
+    font-size: 18px;
+}
+
+/* ---------- LETTER ---------- */
+
+.letter {
+    text-align: left;
+    line-height: 2;
+}
+
+.letter p {
+    margin-bottom: 20px;
+}
+
+.signature {
+    text-align: right;
     font-style: italic;
+    color: #ffb4c9;
+}
+
+/* ---------- FINAL ---------- */
+
+.final-heart {
+    font-size: 75px;
+    animation: heartbeat 1.5s infinite;
+    margin-bottom: 20px;
+}
+
+.final-message {
+    font-size: 22px;
+    line-height: 1.9;
+    margin-top: 20px;
+}
+
+.big-final {
+    font-size: clamp(28px, 7vw, 45px);
+    margin-top: 25px;
+    color: #ffc2d2;
 }
 
 /* ---------- FLOATING HEARTS ---------- */
 
-.heart {
+.float-heart {
     position: fixed;
-    bottom: -30px;
-    font-size: 20px;
-    animation: floatHeart 8s linear infinite;
-    opacity: .5;
+    bottom: -40px;
     pointer-events: none;
-    z-index: 5;
+    opacity: 0;
+    animation: rise 8s linear infinite;
+    z-index: 10;
 }
 
-.heart:nth-child(1) { left: 10%; animation-delay: 0s; }
-.heart:nth-child(2) { left: 30%; animation-delay: 2s; }
-.heart:nth-child(3) { left: 55%; animation-delay: 4s; }
-.heart:nth-child(4) { left: 80%; animation-delay: 1s; }
-
-@keyframes floatHeart {
+@keyframes rise {
     0% {
         transform: translateY(0) rotate(0);
         opacity: 0;
     }
-    20% {
+    15% {
         opacity: .7;
     }
     100% {
@@ -117,264 +359,26 @@ p {
     }
 }
 
-/* ---------- HERO ---------- */
-
-.hero {
-    background:
-        linear-gradient(rgba(18,11,22,.35), rgba(18,11,22,.9)),
-        radial-gradient(circle at center, #63364d, #120b16 70%);
-    position: relative;
-}
-
-.hero .tiny-heart {
-    font-size: 65px;
-    margin-bottom: 20px;
-    animation: heartbeat 1.6s infinite;
-}
-
-@keyframes heartbeat {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.18);
-    }
-}
-
-.hero h1 {
-    background: linear-gradient(90deg, #fff, #ffb6ca, #fff);
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
-.hero .subtitle {
-    margin-top: 25px;
-    font-size: 19px;
-}
-
-.begin {
-    margin-top: 40px;
-    padding: 15px 30px;
-    border: 1px solid rgba(255,255,255,.5);
-    border-radius: 50px;
-    color: white;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    transition: .3s;
-}
-
-.begin:hover {
-    background: white;
-    color: #321525;
-    transform: translateY(-3px);
-}
-
-/* ---------- LETTER ---------- */
-
-.letter {
-    background: linear-gradient(#120b16, #21101d);
-}
-
-.letter-card {
-    max-width: 700px;
-    padding: 40px 28px;
-    border: 1px solid rgba(255,255,255,.12);
-    border-radius: 30px;
-    background: rgba(255,255,255,.045);
-    box-shadow: 0 20px 60px rgba(0,0,0,.3);
-}
-
-.letter-card p {
-    margin-bottom: 20px;
-}
-
-/* ---------- TIMELINE ---------- */
-
-.timeline {
-    background: #160d18;
-}
-
-.timeline-container {
-    max-width: 700px;
-    width: 100%;
-}
-
-.timeline-item {
-    position: relative;
-    margin: 25px 0;
-    padding: 25px;
-    border-left: 2px solid #c86b89;
-    text-align: left;
-    background: rgba(255,255,255,.04);
-    border-radius: 0 20px 20px 0;
-}
-
-.timeline-year {
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    letter-spacing: 3px;
-    color: #ffb0c6;
-    margin-bottom: 8px;
-}
-
-/* ---------- PHOTOS ---------- */
-
-.memories {
-    background: linear-gradient(#160d18, #24121f);
-}
-
-.gallery {
-    width: 100%;
-    max-width: 850px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    margin-top: 25px;
-}
-
-.photo {
-    aspect-ratio: 1 / 1;
-    border-radius: 22px;
-    overflow: hidden;
-    background:
-        linear-gradient(135deg, #4c2739, #24121f);
-    border: 1px solid rgba(255,255,255,.12);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    color: #ffc5d4;
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    text-align: center;
-}
-
-.photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* ---------- LOVE LIST ---------- */
-
-.love {
-    background: #21101d;
-}
-
-.love-grid {
-    max-width: 700px;
-    width: 100%;
-}
-
-.love-item {
-    padding: 20px;
-    margin: 12px 0;
-    border-radius: 18px;
-    background: rgba(255,255,255,.05);
-    border: 1px solid rgba(255,255,255,.08);
-    text-align: left;
-    font-size: 18px;
-    transition: .3s;
-}
-
-.love-item:hover {
-    transform: translateX(5px);
-}
-
-/* ---------- SILLY SECTION ---------- */
-
-.silly {
-    background: linear-gradient(#21101d, #130b16);
-}
-
-.joke-card {
-    max-width: 650px;
-    padding: 35px 25px;
-    background: rgba(255,255,255,.05);
-    border-radius: 30px;
-    border: 1px solid rgba(255,255,255,.1);
-}
-
-.big-emoji {
-    font-size: 60px;
-    margin-bottom: 15px;
-}
-
-/* ---------- FINAL ---------- */
-
-.final {
-    min-height: 110vh;
-    background:
-        radial-gradient(circle at center, #6d304c, #170b14 65%);
-}
-
-.final .gift {
-    font-size: 70px;
-    margin-bottom: 25px;
-    animation: floatGift 2s ease-in-out infinite;
-}
-
-@keyframes floatGift {
-    0%,100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-.surprise {
-    max-width: 650px;
-    padding: 40px 25px;
-    background: rgba(255,255,255,.06);
-    border-radius: 30px;
-    border: 1px solid rgba(255,255,255,.15);
-}
-
-.signature {
-    margin-top: 30px;
-    font-size: 23px;
-    font-style: italic;
-}
-
-/* ---------- FOOTER ---------- */
-
-footer {
-    padding: 35px 20px;
-    text-align: center;
-    background: #09060b;
-}
-
-footer p {
-    font-size: 13px;
-    opacity: .6;
-    margin: auto;
-}
-
 /* ---------- MOBILE ---------- */
 
-@media (max-width: 600px) {
+@media(max-width:600px) {
 
-    section {
-        padding: 70px 18px;
+    .page {
+        padding: 38px 18px;
     }
 
-    .gallery {
+    .memory-grid {
         grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
-
-    .letter-card,
-    .surprise {
-        padding: 30px 20px;
     }
 
     p {
         font-size: 17px;
     }
-}
 
+    button {
+        width: auto;
+    }
+}
 </style>
 </head>
 
@@ -382,360 +386,726 @@ footer p {
 
 <!-- FLOATING HEARTS -->
 
-<div class="heart">❤️</div>
-<div class="heart">♡</div>
-<div class="heart">💗</div>
-<div class="heart">❤️</div>
+<div class="float-heart" style="left:8%;animation-delay:0s;">❤️</div>
+<div class="float-heart" style="left:30%;animation-delay:2s;">💗</div>
+<div class="float-heart" style="left:55%;animation-delay:4s;">♡</div>
+<div class="float-heart" style="left:80%;animation-delay:1s;">❤️</div>
 
 
-<!-- ================= HERO ================= -->
+<!-- ================================================= -->
+<!-- PAGE 1 -->
+<!-- ================================================= -->
 
-<section class="hero">
+<section class="page p1 active" id="page1">
 
-    <div class="tiny-heart">❤️</div>
+<div class="container">
 
-    <div class="small">
-        A little surprise from Mammu
-    </div>
+<div class="big-heart">❤️</div>
 
-    <h1>
-        Happy Birthday<br>
-        Thangam
-    </h1>
+<div class="small">
+A secret birthday surprise
+</div>
 
-    <p class="subtitle">
-        Today is your day...<br>
-        but I wanted to make a tiny piece of it ours.
-    </p>
+<h1>
+Happy Birthday<br>
+Thangam
+</h1>
 
-    <a href="#letter" class="begin">
-        Open your surprise ✨
-    </a>
+<p style="margin:25px auto;">
+Someone very special made this little corner of the internet
+just for you...
+</p>
 
-</section>
+<p>
+<b>Hint:</b> It's your Mammu. 🥹
+</p>
 
+<div class="buttons">
+<button class="primary" onclick="nextPage()">
+Open my surprise ✨
+</button>
+</div>
 
-<!-- ================= LETTER ================= -->
-
-<section class="letter" id="letter">
-
-    <div class="small">For you</div>
-
-    <h2>Dear Thangam ❤️</h2>
-
-    <div class="letter-card">
-
-        <p>
-            There are some things that are difficult to say
-            in a normal message.
-        </p>
-
-        <p>
-            So today, on your birthday, I wanted to make
-            something just for you.
-        </p>
-
-        <p>
-            <b>WRITE YOUR PERSONAL BIRTHDAY MESSAGE HERE.</b>
-        </p>
-
-        <p>
-            Tell him what you feel, what you appreciate about
-            him, and what you wish for his future.
-        </p>
-
-        <p class="italic">
-            "Some people become a beautiful part of your story.
-            Somehow, you became my favourite part."
-        </p>
-
-        <p>
-            Happy Birthday, my Thangam. ❤️
-        </p>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- ================= OUR YEARS ================= -->
+<!-- ================================================= -->
+<!-- PAGE 2 -->
+<!-- ================================================= -->
 
-<section class="timeline">
+<section class="page p2" id="page2">
 
-    <div class="small">Us</div>
+<div class="container">
 
-    <h2>Our Story 🥹</h2>
+<div class="cartoon">🥰💝🥳</div>
 
-    <p>
-        Four years. So many memories.
-        And somehow, still so much more to come.
-    </p>
+<div class="small">
+Question no. 1
+</div>
 
-    <div class="timeline-container">
+<h2>
+Do you think you're my favourite person?
+</h2>
 
-        <div class="timeline-item">
+<p>
+Choose carefully, Thangam. 😏
+</p>
 
-            <div class="timeline-year">YEAR 01</div>
+<div class="buttons">
 
-            <h3>Where it all began ❤️</h3>
+<button onclick="answer2('yes')">
+YES 😌❤️
+</button>
 
-            <p>
-                WRITE YOUR FIRST-YEAR MEMORY HERE.
-            </p>
+<button onclick="answer2('no')">
+NO 😂
+</button>
 
-        </div>
+</div>
 
+<div class="answer" id="answer2"></div>
 
-        <div class="timeline-item">
-
-            <div class="timeline-year">YEAR 02</div>
-
-            <h3>Growing together 🌷</h3>
-
-            <p>
-                WRITE YOUR SECOND-YEAR MEMORY HERE.
-            </p>
-
-        </div>
-
-
-        <div class="timeline-item">
-
-            <div class="timeline-year">YEAR 03</div>
-
-            <h3>More memories ✨</h3>
-
-            <p>
-                WRITE YOUR THIRD-YEAR MEMORY HERE.
-            </p>
-
-        </div>
-
-
-        <div class="timeline-item">
-
-            <div class="timeline-year">YEAR 04</div>
-
-            <h3>Still choosing you ❤️</h3>
-
-            <p>
-                WRITE YOUR FOURTH-YEAR MEMORY HERE.
-            </p>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- ================= MEMORIES ================= -->
+<!-- ================================================= -->
+<!-- PAGE 3 -->
+<!-- ================================================= -->
 
-<section class="memories">
+<section class="page p3" id="page3">
 
-    <div class="small">Our memories</div>
+<div class="container">
 
-    <h2>Little Pieces of Us 📸</h2>
+<div class="cartoon">😤😂❤️</div>
 
-    <p>
-        Every picture has a story.
-        These are some of my favourite ones.
-    </p>
+<div class="small">
+Official complaint
+</div>
 
-    <div class="gallery">
+<h2>
+I have one serious complaint about you...
+</h2>
 
-        <div class="photo">
-            📷<br><br>
-            ADD PHOTO 1
-        </div>
+<div class="card">
 
-        <div class="photo">
-            📷<br><br>
-            ADD PHOTO 2
-        </div>
+<p>
+You make <b>way too many silly jokes.</b>
+</p>
 
-        <div class="photo">
-            📷<br><br>
-            ADD PHOTO 3
-        </div>
+<p style="margin-top:18px;">
+And somehow...
+</p>
 
-        <div class="photo">
-            📷<br><br>
-            ADD PHOTO 4
-        </div>
+<p style="margin-top:10px;">
+I still laugh at them. 🙄😂
+</p>
 
-        <div class="photo">
-            📷<br><br>
-            ADD PHOTO 5
-        </div>
+</div>
 
-        <div class="photo">
-            📷<br><br>
-            ADD PHOTO 6
-        </div>
+<div class="buttons">
 
-    </div>
+<button class="primary" onclick="nextPage()">
+Okay, continue 😂
+</button>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- ================= THINGS I LOVE ================= -->
+<!-- ================================================= -->
+<!-- PAGE 4 -->
+<!-- ================================================= -->
 
-<section class="love">
+<section class="page p4" id="page4">
 
-    <div class="small">You</div>
+<div class="container">
 
-    <h2>Things I Love About You ❤️</h2>
+<div class="small">
+Our story
+</div>
 
-    <div class="love-grid">
+<h2>
+Four Years of Us ❤️
+</h2>
 
-        <div class="love-item">
-            ✨ Your hard work
-        </div>
+<p>
+Four years.
+Four chapters.
+So many memories.
+</p>
 
-        <div class="love-item">
-            🔥 Your passion
-        </div>
+<div class="timeline">
 
-        <div class="love-item">
-            😂 Your silly jokes
-        </div>
+<div class="year">
+<span>YEAR 01</span>
+<h3>Where it all began 🌷</h3>
+<p>
+ADD YOUR FIRST-YEAR MEMORY HERE.
+</p>
+</div>
 
-        <div class="love-item">
-            🥹 The way you make me smile
-        </div>
+<div class="year">
+<span>YEAR 02</span>
+<h3>Growing together ❤️</h3>
+<p>
+ADD YOUR SECOND-YEAR MEMORY HERE.
+</p>
+</div>
 
-        <div class="love-item">
-            🤍 The way you care
-        </div>
+<div class="year">
+<span>YEAR 03</span>
+<h3>More memories ✨</h3>
+<p>
+ADD YOUR THIRD-YEAR MEMORY HERE.
+</p>
+</div>
 
-        <div class="love-item">
-            🌙 The person you are when nobody is watching
-        </div>
+<div class="year">
+<span>YEAR 04</span>
+<h3>Still choosing you 🥹</h3>
+<p>
+ADD YOUR FOURTH-YEAR MEMORY HERE.
+</p>
+</div>
 
-        <div class="love-item">
-            ❤️ ADD ONE MORE THING HERE
-        </div>
+</div>
 
-    </div>
+<div class="buttons">
+<button class="primary" onclick="nextPage()">
+Continue ❤️
+</button>
+</div>
 
-</section>
-
-
-<!-- ================= SILLY ================= -->
-
-<section class="silly">
-
-    <div class="big-emoji">😂</div>
-
-    <div class="small">And obviously...</div>
-
-    <h2>Your Silly Side</h2>
-
-    <div class="joke-card">
-
-        <p>
-            Life with you would definitely be incomplete
-            without all your silly jokes.
-        </p>
-
-        <br>
-
-        <p>
-            <b>ADD YOUR FAVOURITE INSIDE JOKE HERE 😂</b>
-        </p>
-
-        <br>
-
-        <p>
-            And yes... I pretend not to laugh sometimes.
-            But you know I secretly love it. ❤️
-        </p>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- ================= FINAL LETTER ================= -->
+<!-- ================================================= -->
+<!-- PAGE 5 -->
+<!-- ================================================= -->
 
-<section class="final">
+<section class="page p5" id="page5">
 
-    <div class="gift">🎁</div>
+<div class="container">
 
-    <div class="small">One last thing...</div>
+<div class="small">
+Memory machine
+</div>
 
-    <h2>Before You Go ❤️</h2>
+<h2>
+Choose a Memory 📸
+</h2>
 
-    <div class="surprise">
+<p>
+Which one do you want to open?
+</p>
 
-        <p>
-            Thangam,
-        </p>
+<div class="memory-grid">
 
-        <br>
+<div class="memory" onclick="memory('favourite')">
+<div class="memory-icon">🥰</div>
+<b>Favourite</b>
+</div>
 
-        <p>
-            I don't know what the future has planned for us.
-            But I know one thing...
-        </p>
+<div class="memory" onclick="memory('funny')">
+<div class="memory-icon">😂</div>
+<b>Funniest</b>
+</div>
 
-        <br>
+<div class="memory" onclick="memory('romantic')">
+<div class="memory-icon">❤️</div>
+<b>Most romantic</b>
+</div>
 
-        <p>
-            I want to keep collecting memories with you.
-        </p>
+<div class="memory" onclick="memory('special')">
+<div class="memory-icon">🥹</div>
+<b>Never forget</b>
+</div>
 
-        <br>
+</div>
 
-        <p>
-            More laughs.<br>
-            More silly jokes.<br>
-            More photographs.<br>
-            More birthdays.<br>
-            More "us".
-        </p>
+<div class="card" id="memoryResult" style="display:none;"></div>
 
-        <br>
+<div class="buttons">
+<button class="primary" onclick="nextPage()">
+Next surprise ✨
+</button>
+</div>
 
-        <p>
-            And if I had to choose all over again...
-        </p>
-
-        <br>
-
-        <h3>
-            I would still choose you. ❤️
-        </h3>
-
-        <p class="signature">
-            Happy Birthday, Thangam.
-            <br><br>
-            Forever yours,<br>
-            Mammu ❤️
-        </p>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- ================================================= -->
+<!-- PAGE 6 -->
+<!-- ================================================= -->
 
-<footer>
+<section class="page p6" id="page6">
 
-    <p>
-        Made with way too much love ❤️
-    </p>
+<div class="container">
 
-    <p>
-        For Thangam — from Mammu
-    </p>
+<div class="cartoon">💘😏💘</div>
 
-</footer>
+<div class="small">
+Important research
+</div>
 
+<h2>
+The Mammu–Thangam Love Quiz
+</h2>
+
+<p>
+Let's see how well you know your girlfriend. 😌
+</p>
+
+<div class="card">
+
+<h3>
+Who loves whom more?
+</h3>
+
+<div class="buttons">
+
+<button onclick="quiz('mammu')">
+Mammu ❤️
+</button>
+
+<button onclick="quiz('thangam')">
+Thangam ❤️
+</button>
+
+</div>
+
+<div class="answer" id="quizAnswer"></div>
+
+</div>
+
+<div class="card">
+
+<h3>
+Who is more dramatic? 😂
+</h3>
+
+<div class="buttons">
+
+<button onclick="quiz2('mammu')">
+Mammu
+</button>
+
+<button onclick="quiz2('thangam')">
+Thangam
+</button>
+
+</div>
+
+<div class="answer" id="quizAnswer2"></div>
+
+</div>
+
+<div class="buttons">
+<button class="primary" onclick="nextPage()">
+Okay okay... enough 😂
+</button>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- PAGE 7 -->
+<!-- ================================================= -->
+
+<section class="page p7" id="page7">
+
+<div class="container">
+
+<div class="small">
+Okay...
+</div>
+
+<h2>
+Enough teasing. 🥹
+</h2>
+
+<div class="cartoon">
+🤍🫂🤍
+</div>
+
+<div class="card">
+
+<p>
+Behind all the jokes, teasing and nonsense...
+there are some things I really want you to know.
+</p>
+
+<br>
+
+<p>
+<b>
+ADD YOUR PERSONAL MESSAGE ABOUT HIS HARD WORK,
+PASSION, SUPPORT, AND THE THINGS YOU ADMIRE ABOUT HIM HERE.
+</b>
+</p>
+
+<br>
+
+<p>
+I hope you never forget how proud I am of you.
+❤️
+</p>
+
+</div>
+
+<div class="buttons">
+<button class="primary" onclick="nextPage()">
+Read my letter 💌
+</button>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- PAGE 8 -->
+<!-- ================================================= -->
+
+<section class="page p8" id="page8">
+
+<div class="container">
+
+<div class="small">
+From my heart
+</div>
+
+<h2>
+Dear Thangam... 💌
+</h2>
+
+<div class="card letter">
+
+<p>
+My Thangam,
+</p>
+
+<p>
+This is where I want to say everything that I sometimes
+don't know how to say normally.
+</p>
+
+<p>
+<b>
+WRITE YOUR FULL BIRTHDAY LETTER HERE.
+</b>
+</p>
+
+<p>
+Tell him about your four years together,
+your favourite memories, what you love about him,
+and everything you wish for him.
+</p>
+
+<p>
+No matter how many birthdays come,
+I hope we keep making our own little memories.
+</p>
+
+<p class="signature">
+With all my love,<br>
+Mammu ❤️
+</p>
+
+</div>
+
+<div class="buttons">
+<button class="primary" onclick="nextPage()">
+One last thing... 🎁
+</button>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- PAGE 9 -->
+<!-- ================================================= -->
+
+<section class="page p9" id="page9">
+
+<div class="container">
+
+<div class="cartoon">
+🥺👉👈❤️
+</div>
+
+<div class="small">
+One last question
+</div>
+
+<h2>
+Will you stay with your Mammu
+for all the birthdays still to come?
+</h2>
+
+<p>
+Think very carefully. 😌
+</p>
+
+<div class="buttons">
+
+<button class="primary" onclick="finalAnswer()">
+YES ❤️
+</button>
+
+<button class="primary" onclick="finalAnswer()">
+YES, OBVIOUSLY 🙄❤️
+</button>
+
+</div>
+
+<div class="answer" id="finalAnswer"></div>
+
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- PAGE 10 -->
+<!-- ================================================= -->
+
+<section class="page p10" id="page10">
+
+<div class="container">
+
+<div class="final-heart">
+❤️
+</div>
+
+<div class="small">
+And finally...
+</div>
+
+<h1>
+Happy Birthday,<br>
+My Thangam
+</h1>
+
+<div class="cartoon">
+🎂🥰🎁
+</div>
+
+<div class="card">
+
+<p class="final-message">
+
+Four years down...
+
+<br><br>
+
+and I still choose you.
+
+<br><br>
+
+For all the laughs.<br>
+For all the silly jokes.<br>
+For every difficult day.<br>
+For every beautiful memory.<br>
+For everything that is still waiting for us.
+
+</p>
+
+<div class="big-final">
+I would choose you again. ❤️
+</div>
+
+<p style="margin:25px auto 0;">
+Happy Birthday, Thangam. 🎂
+</p>
+
+<p style="margin:15px auto 0;">
+Forever yours,
+<br>
+<b>Mammu ❤️</b>
+</p>
+
+</div>
+
+<p style="margin-top:30px;font-size:13px;opacity:.55;">
+Made with too much love, obviously. ❤️
+</p>
+
+</div>
+
+</section>
+
+
+<script>
+
+/* ---------- PAGE NAVIGATION ---------- */
+
+let currentPage = 1;
+
+function showPage(number) {
+
+    document.querySelectorAll(".page").forEach(function(page) {
+        page.classList.remove("active");
+    });
+
+    document.getElementById("page" + number).classList.add("active");
+
+    currentPage = number;
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+function nextPage() {
+
+    if (currentPage < 10) {
+        showPage(currentPage + 1);
+    }
+
+}
+
+
+/* ---------- PAGE 2 ---------- */
+
+function answer2(choice) {
+
+    const box = document.getElementById("answer2");
+
+    if (choice === "yes") {
+
+        box.innerHTML =
+        "Good answer. 😌❤️ I knew you had common sense. You may continue.";
+
+        setTimeout(function() {
+            nextPage();
+        }, 2200);
+
+    } else {
+
+        box.innerHTML =
+        "EXCUSE ME?! 😂 Wrong answer. Obviously I'm your favourite. Try again!";
+
+    }
+
+}
+
+
+/* ---------- MEMORY MACHINE ---------- */
+
+function memory(type) {
+
+    const box = document.getElementById("memoryResult");
+
+    box.style.display = "block";
+
+    if (type === "favourite") {
+
+        box.innerHTML =
+        "🥰 <br><br><b>Favourite Memory</b><br><br>ADD YOUR FAVOURITE MEMORY HERE.";
+
+    }
+
+    if (type === "funny") {
+
+        box.innerHTML =
+        "😂 <br><br><b>Funniest Memory</b><br><br>ADD YOUR FUNNIEST MEMORY OR INSIDE JOKE HERE.";
+
+    }
+
+    if (type === "romantic") {
+
+        box.innerHTML =
+        "❤️ <br><br><b>Most Romantic</b><br><br>ADD YOUR MOST ROMANTIC MEMORY HERE.";
+
+    }
+
+    if (type === "special") {
+
+        box.innerHTML =
+        "🥹 <br><br><b>A Memory I'll Never Forget</b><br><br>ADD THAT SPECIAL MEMORY HERE.";
+
+    }
+
+}
+
+
+/* ---------- LOVE QUIZ ---------- */
+
+function quiz(choice) {
+
+    const box = document.getElementById("quizAnswer");
+
+    if (choice === "mammu") {
+
+        box.innerHTML =
+        "Correct. Obviously. 😂❤️";
+
+    } else {
+
+        box.innerHTML =
+        "Nice try. Mammu wins this one. 😌❤️";
+
+    }
+
+}
+
+
+function quiz2(choice) {
+
+    const box = document.getElementById("quizAnswer2");
+
+    if (choice === "thangam") {
+
+        box.innerHTML =
+        "Correct answer! 😂 I knew you'd admit it.";
+
+    } else {
+
+        box.innerHTML =
+        "Hmm... suspicious answer. We'll discuss this later. 😂";
+
+    }
+
+}
+
+
+/* ---------- FINAL QUESTION ---------- */
+
+function finalAnswer() {
+
+    const box = document.getElementById("finalAnswer");
+
+    box.innerHTML =
+    "Good. ❤️ That's the only acceptable answer.";
+
+    setTimeout(function() {
+        showPage(10);
+    }, 2200);
+
+}
+
+</script>
 
 </body>
 </html>
 ```
-
