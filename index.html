@@ -138,17 +138,17 @@ button:hover {
   margin-bottom: 25px;
 }
 
-/* Story */
+
+}
 .story-photo {
   width: min(500px, 90%);
-  max-height: 430px;
-  object-fit: cover;
+  max-height: 500px;
+  object-fit: contain;
   border-radius: 25px;
   margin: 15px auto 25px;
   display: block;
   box-shadow: 0 15px 35px rgba(100,70,90,0.18);
 }
-
 .story-text {
   max-width: 720px;
   margin: auto;
@@ -200,9 +200,11 @@ button:hover {
 
 .polaroid img {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+  height: 230px;
+  object-fit: contain;
   display: block;
+  background: #fff;
+}
 }
 
 .polaroid span {
