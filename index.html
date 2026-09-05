@@ -3,191 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Happy Birthday Tamilshan ❤️</title>
 
 <style>
-
-/* =========================
-   WARM VINTAGE SCRAPBOOK
-========================= */
-
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
-  font-family: "Segoe UI", sans-serif;
-  color: #55443d;
-  min-height: 100vh;
-  overflow-x: hidden;
-
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
   background:
-    radial-gradient(circle at 15% 20%, rgba(183, 139, 103, 0.10) 0 2px, transparent 3px),
-    radial-gradient(circle at 80% 70%, rgba(160, 116, 91, 0.08) 0 2px, transparent 3px),
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.5), transparent 25%),
+    radial-gradient(circle at 80% 70%, rgba(180,140,110,0.08), transparent 30%),
     #f3eadc;
+  color: #5b4638;
+  overflow-x: hidden;
 }
 
-/* subtle paper texture */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.18;
-  background-image:
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 3px,
-      rgba(80, 55, 45, 0.025) 4px
-    );
-  z-index: 0;
-}
+/* =========================
+   PAGE SYSTEM
+========================= */
 
 .page {
   display: none;
   min-height: 100vh;
   width: 100%;
-  padding: 45px 20px 80px;
+  padding: 45px 20px;
   align-items: center;
   justify-content: center;
-  position: relative;
-  z-index: 1;
-  animation: pageIn 0.7s ease;
+  text-align: center;
 }
 
 .page.active {
   display: flex;
+  animation: fadeIn 0.7s ease;
 }
 
-.content {
-  width: min(900px, 94%);
-  text-align: center;
-}
-
-@keyframes pageIn {
+@keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(18px) rotate(-0.3deg);
+    transform: translateY(12px);
   }
-
   to {
     opacity: 1;
-    transform: translateY(0) rotate(0);
+    transform: translateY(0);
   }
 }
-
-
-/* =========================
-   TYPOGRAPHY
-========================= */
-
-.eyebrow {
-  font-size: 13px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #9a725e;
-  margin-bottom: 14px;
-}
-
-h1,
-h2 {
-  font-family: Georgia, serif;
-  font-weight: normal;
-  color: #754f42;
-}
-
-h1 {
-  font-size: clamp(38px, 7vw, 68px);
-  line-height: 1.12;
-  margin-bottom: 22px;
-}
-
-h2 {
-  font-size: clamp(30px, 5vw, 48px);
-  margin-bottom: 20px;
-}
-
-p {
-  font-size: 16px;
-  line-height: 1.9;
-  margin-bottom: 24px;
-}
-
-.subtitle {
-  max-width: 650px;
-  margin: 0 auto 30px;
-  white-space: pre-line;
-}
-
-
-/* =========================
-   SCRAPBOOK DECORATION
-========================= */
-
-.illustration {
-  width: 88px;
-  height: 88px;
-  margin: 0 auto 24px;
-
-  border-radius: 50%;
-  background: #ead6c3;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 40px;
-
-  box-shadow:
-    0 8px 20px rgba(80, 55, 45, 0.12);
-
-  transform: rotate(-3deg);
-}
-
-.illustration::after {
-  content: "";
-  position: absolute;
-}
-
-
-/* =========================
-   BUTTONS
-========================= */
-
-button {
-  border: 1px solid #9d7560;
-  border-radius: 5px;
-
-  padding: 13px 25px;
-  margin: 7px;
-
-  font-size: 15px;
-  font-weight: 600;
-
-  cursor: pointer;
-
-  background: #9d7560;
-  color: #fffaf3;
-
-  box-shadow:
-    0 5px 12px rgba(80, 55, 45, 0.13);
-
-  transition: 0.25s;
-}
-
-button:hover {
-  transform: translateY(-3px) rotate(-1deg);
-}
-
-.secondary {
-  background: #e5d2c0;
-  color: #684c40;
-  border-color: #b7927b;
-}
-
 
 /* =========================
    SCRAPBOOK CARD
@@ -195,49 +58,110 @@ button:hover {
 
 .card {
   position: relative;
-
+  width: min(850px, 94vw);
+  padding: 45px 35px;
   background: #fffaf1;
-
-  border: 1px solid #d8c4ae;
-
-  padding: 35px;
-
-  border-radius: 3px;
-
+  border: 1px solid #d8c5ae;
   box-shadow:
-    0 12px 30px rgba(80, 55, 45, 0.12);
-
-  margin: 20px auto;
-
-  transform: rotate(-0.3deg);
+    0 15px 35px rgba(80,55,45,0.14),
+    0 2px 5px rgba(80,55,45,0.08);
+  border-radius: 4px;
 }
 
 .card::before {
   content: "";
-
   position: absolute;
-
-  width: 75px;
-  height: 20px;
-
-  top: -10px;
+  top: -12px;
   left: 50%;
-
   transform: translateX(-50%) rotate(-2deg);
-
-  background: rgba(205, 174, 143, 0.65);
-
-  box-shadow:
-    0 2px 5px rgba(80, 55, 45, 0.08);
+  width: 95px;
+  height: 25px;
+  background: rgba(211,184,153,0.55);
 }
 
-.question {
+/* =========================
+   TEXT
+========================= */
+
+h1 {
+  font-size: clamp(38px, 7vw, 70px);
+  margin: 10px 0 25px;
+  color: #754f45;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: clamp(27px, 5vw, 43px);
+  margin: 10px 0 25px;
+  color: #754f45;
+  font-weight: normal;
+}
+
+h3 {
+  color: #805a4c;
+  font-size: 25px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin: 15px auto;
+  max-width: 680px;
+}
+
+.small-text {
+  font-size: 15px;
+  color: #8a7162;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+  border: none;
+  background: #9b6b5d;
+  color: white;
+  padding: 13px 25px;
+  border-radius: 25px;
   font-family: Georgia, serif;
-  font-size: 28px;
-  color: #754f42;
-  margin-bottom: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px 6px;
+  transition: 0.25s ease;
+  box-shadow: 0 5px 12px rgba(80,55,45,0.15);
 }
 
+button:hover {
+  transform: translateY(-3px);
+  background: #805449;
+}
+
+button.secondary {
+  background: #d6b8a4;
+  color: #5b4638;
+}
+
+button.secondary:hover {
+  background: #c8a28b;
+}
+
+/* =========================
+   COVER PAGE
+========================= */
+
+.cover {
+  padding: 55px 30px;
+}
+
+.cover-heart {
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+
+.cover p {
+  font-size: 20px;
+}
 
 /* =========================
    STORY PHOTOS
@@ -246,87 +170,33 @@ button:hover {
 .story-photo {
   width: min(360px, 80vw);
   height: 300px;
-
   object-fit: contain;
-
   border-radius: 4px;
-
   padding: 10px;
-
   background: #fffaf1;
-
   border: 1px solid #d4c0aa;
-
   margin: 18px auto 28px;
-
   display: block;
-
-  box-shadow:
-    0 12px 25px rgba(80, 55, 45, 0.16);
-
+  box-shadow: 0 12px 25px rgba(80,55,45,0.16);
   transform: rotate(-1.5deg);
 }
-
-.story-photo:nth-of-type(even) {
-  transform: rotate(1.5deg);
-}
-
-.story-text {
-  max-width: 720px;
-  margin: auto;
-  white-space: pre-line;
-}
-
-
-/* =========================
-   YEAR PAGES
-========================= */
-
-.year-number {
-  font-family: Georgia, serif;
-  font-size: 70px;
-  color: #a87d63;
-  margin-bottom: 3px;
-}
-
-.year-label {
-  color: #86604e;
-  font-weight: 600;
-  letter-spacing: 3px;
-  margin-bottom: 18px;
-}
-
 
 /* =========================
    POLAROID ALBUM
 ========================= */
 
-.gallery {
+.album {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
   margin-top: 30px;
 }
 
 .polaroid {
-  position: relative;
-
-  background: #fffdf7;
-
-  padding: 10px 10px 18px;
-
-  border: 1px solid #ddd0bd;
-
-  border-radius: 2px;
-
-  box-shadow:
-    0 10px 22px rgba(80, 55, 45, 0.15);
-
+  background: #fff;
+  padding: 10px 10px 28px;
+  box-shadow: 0 10px 20px rgba(80,55,45,0.15);
   transition: 0.3s;
-}
-
-.polaroid:hover {
-  transform: translateY(-7px) rotate(0deg);
 }
 
 .polaroid:nth-child(odd) {
@@ -337,238 +207,151 @@ button:hover {
   transform: rotate(2deg);
 }
 
+.polaroid:hover {
+  transform: rotate(0deg) scale(1.03);
+}
+
 .polaroid img {
   width: 100%;
   height: 230px;
-
   object-fit: contain;
-
   display: block;
-
   background: #fff;
 }
 
-.polaroid span {
-  display: block;
-  margin-top: 10px;
-
-  font-family: Georgia, serif;
-
-  color: #795849;
-  font-size: 14px;
-}
-
-
 /* =========================
-   LOVE LIST
-========================= */
-
-.love-list {
-  max-width: 700px;
-  margin: 25px auto;
-  text-align: left;
-}
-
-.love-item {
-  position: relative;
-
-  background: #fffaf1;
-
-  border-left: 4px solid #b88a70;
-
-  margin: 14px 0;
-
-  padding: 17px 22px;
-
-  line-height: 1.7;
-
-  box-shadow:
-    0 5px 15px rgba(80, 55, 45, 0.08);
-
-  transform: rotate(-0.3deg);
-}
-
-.love-item:nth-child(even) {
-  transform: rotate(0.3deg);
-}
-
-
-/* =========================
-   ENVELOPE
+   LETTER
 ========================= */
 
 .envelope {
-  width: min(500px, 90%);
-
-  margin: 30px auto;
-
-  padding: 35px;
-
-  background: #fffaf1;
-
-  border: 2px dashed #b8957e;
-
-  border-radius: 4px;
-
+  width: 260px;
+  height: 170px;
+  margin: 35px auto;
+  position: relative;
   cursor: pointer;
-
-  transition: 0.3s;
-
-  box-shadow:
-    0 10px 25px rgba(80, 55, 45, 0.12);
+  perspective: 800px;
 }
 
-.envelope:hover {
-  transform: translateY(-5px) rotate(-1deg);
+.envelope-body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #d9b69f;
+  border: 2px solid #a9826e;
+  border-radius: 4px;
+  box-shadow: 0 12px 25px rgba(80,55,45,0.18);
 }
+
+.envelope-flap {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 128px solid transparent;
+  border-right: 128px solid transparent;
+  border-top: 90px solid #c99f88;
+  top: 0;
+  left: 2px;
+  z-index: 2;
+  transition: 0.7s ease;
+  transform-origin: top;
+}
+
+.envelope-heart {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 58%;
+  transform: translate(-50%, -50%);
+  font-size: 38px;
+}
+
+.envelope.open .envelope-flap {
+  transform: rotateX(180deg);
+}
+
+/* =========================
+   LETTER CONTENT
+========================= */
 
 .letter {
   display: none;
-
   text-align: left;
-
+  background: #fffdf7;
+  border: 1px solid #d8c5ae;
+  padding: 30px;
   margin-top: 25px;
+  box-shadow: inset 0 0 20px rgba(120,90,65,0.05);
+}
 
-  white-space: pre-line;
+.letter.show {
+  display: block;
+  animation: fadeIn 0.8s ease;
+}
 
+.letter p {
+  max-width: none;
+  font-size: 17px;
   line-height: 1.9;
 }
 
-.letter.open {
-  display: block;
-}
-
-
 /* =========================
-   FINAL PHOTO
+   CAKE
 ========================= */
-
-.fav-photo {
-  width: min(430px, 88%);
-  max-height: 500px;
-
-  object-fit: cover;
-
-  border-radius: 4px;
-
-  padding: 10px;
-
-  background: #fffaf1;
-
-  border: 1px solid #d4c0aa;
-
-  margin: 20px auto;
-
-  display: block;
-
-  box-shadow:
-    0 18px 40px rgba(80, 55, 45, 0.18);
-
-  transform: rotate(1deg);
-}
-
-
-/* =========================
-   CAKE PAGE
-========================= */
-
-.countdown {
-  font-family: Georgia, serif;
-
-  font-size: 100px;
-
-  color: #9a604d;
-
-  min-height: 125px;
-
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-}
 
 .cake-area {
+  margin: 25px auto;
   display: none;
-
-  margin: 20px auto 30px;
-
-  position: relative;
-
-  width: 230px;
-  height: 190px;
-}
-
-.cake-area.show {
-  display: block;
 }
 
 .cake {
+  position: relative;
+  width: 230px;
+  height: 170px;
+  margin: 30px auto;
+}
+
+.cake-bottom {
   position: absolute;
-
-  bottom: 15px;
-  left: 25px;
-
-  width: 180px;
-  height: 95px;
-
-  background: #c98f7c;
-
+  bottom: 0;
+  left: 15px;
+  width: 200px;
+  height: 90px;
+  background: #c98d78;
   border-radius: 12px 12px 20px 20px;
-
-  box-shadow:
-    inset 0 -15px rgba(100, 60, 50, 0.12);
+  box-shadow: 0 8px 0 #a86f5e;
 }
 
-.cake:before {
-  content: "";
-
+.cake-middle {
   position: absolute;
-
-  left: 0;
-  top: -22px;
-
+  bottom: 70px;
+  left: 25px;
   width: 180px;
-  height: 35px;
-
-  background: #fff2df;
-
-  border-radius: 50%;
+  height: 45px;
+  background: #e0b19b;
+  border-radius: 12px 12px 5px 5px;
 }
 
-.cake:after {
-  content: "♡  ♡  ♡";
-
+.icing {
   position: absolute;
-
-  top: 37px;
-
-  width: 100%;
-
-  text-align: center;
-
-  color: white;
-
-  font-size: 20px;
+  bottom: 105px;
+  left: 20px;
+  width: 190px;
+  height: 25px;
+  background: #f4dfce;
+  border-radius: 15px 15px 8px 8px;
 }
 
 .candle {
   position: absolute;
-
+  bottom: 128px;
   width: 12px;
-  height: 48px;
-
-  background: #d8b47a;
-
-  top: 42px;
-
-  border-radius: 5px;
-
-  z-index: 3;
+  height: 38px;
+  background: #8e6658;
+  border-radius: 4px;
 }
 
 .candle.one {
-  left: 72px;
+  left: 70px;
 }
 
 .candle.two {
@@ -576,107 +359,102 @@ button:hover {
 }
 
 .candle.three {
-  left: 146px;
+  left: 148px;
 }
 
 .flame {
   position: absolute;
-
   width: 14px;
   height: 20px;
-
-  background: #d8874e;
-
-  border-radius: 50%;
-
-  top: -19px;
+  background: #d9905b;
+  border-radius: 50% 50% 50% 50%;
+  top: -20px;
   left: -1px;
-
   animation: flicker 0.5s infinite alternate;
-}
-
-.flame.off {
-  display: none;
 }
 
 @keyframes flicker {
   from {
     transform: scale(0.9);
   }
-
   to {
     transform: scale(1.1);
   }
 }
 
-.blow {
+#blowButton {
   display: none;
 }
 
-.blow.show {
-  display: inline-block;
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown {
+  font-size: 100px;
+  color: #805548;
+  margin: 20px;
+  animation: pop 0.6s ease;
 }
 
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  70% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
 /* =========================
    FINAL PAGE
 ========================= */
 
-.final-heart {
-  font-size: 70px;
-
-  animation: heartbeat 1.2s infinite;
+.final-photo {
+  width: min(420px, 82vw);
+  max-height: 430px;
+  object-fit: contain;
+  border-radius: 5px;
+  padding: 10px;
+  background: #fffaf1;
+  border: 1px solid #d4c0aa;
+  box-shadow: 0 15px 30px rgba(80,55,45,0.18);
+  margin: 20px auto;
 }
-
-@keyframes heartbeat {
-  0%, 100% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.12);
-  }
-}
-
 
 /* =========================
-   PROGRESS DOTS
+   PROGRESS
 ========================= */
 
 .progress {
   position: fixed;
-
-  bottom: 17px;
+  bottom: 18px;
   left: 50%;
-
   transform: translateX(-50%);
-
   display: flex;
-
-  gap: 6px;
-
+  gap: 7px;
   z-index: 20;
 }
 
 .dot {
   width: 7px;
   height: 7px;
-
+  background: #c8ad9a;
   border-radius: 50%;
-
-  background: #cdb6a2;
-
   transition: 0.3s;
 }
 
 .dot.active {
-  width: 22px;
-
-  border-radius: 10px;
-
-  background: #906451;
+  background: #805548;
+  transform: scale(1.35);
 }
-
 
 /* =========================
    MOBILE
@@ -684,54 +462,44 @@ button:hover {
 
 @media (max-width: 700px) {
 
-  .page {
-    padding: 35px 15px 65px;
-  }
-
   .card {
-    padding: 27px 18px;
+    padding: 35px 20px;
   }
 
   p {
-    font-size: 15px;
-    line-height: 1.8;
+    font-size: 16px;
   }
 
-  .story-photo {
-    width: min(330px, 82vw);
-    height: 280px;
-  }
-
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
+  .album {
+    grid-template-columns: 1fr;
   }
 
   .polaroid img {
     height: 190px;
   }
 
-  .year-number {
-    font-size: 55px;
-  }
-
-  .countdown {
-    font-size: 80px;
+  .story-photo {
+    width: min(330px, 82vw);
+    height: 280px;
   }
 }
 
 @media (max-width: 420px) {
 
-  .gallery {
-    grid-template-columns: 1fr 1fr;
+  .page {
+    padding: 30px 12px;
   }
 
-  .polaroid span {
-    font-size: 12px;
+  .card {
+    padding: 30px 16px;
   }
 
-  button {
-    padding: 12px 20px;
+  h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 29px;
   }
 
   .story-photo {
@@ -741,40 +509,46 @@ button:hover {
   .polaroid img {
     height: 165px;
   }
-}
 
+  .envelope {
+    width: 230px;
+    height: 150px;
+  }
+
+  .envelope-flap {
+    border-left-width: 113px;
+    border-right-width: 113px;
+    border-top-width: 80px;
+  }
+}
 </style>
 </head>
 
 <body>
-
 
 <!-- =========================
      PAGE 1
 ========================= -->
 
 <section class="page active">
+  <div class="card cover">
 
-  <div class="content">
+    <div class="cover-heart">❤️</div>
 
-    <div class="illustration">🎂</div>
+    <h1>Happy Birthday Tamilshan</h1>
 
-    <div class="eyebrow">
-      A little surprise from Mammu
-    </div>
+    <p>
+      Happy birthday, baby! 💗
+    </p>
 
-    <h1>
-      Happy Birthday Tamilshan
-    </h1>
+    <p>
+      I made a little something for your birthday.<br>
+      I hope you like it. 🤗
+    </p>
 
-    <p class="subtitle">
-Happy birthday, baby! 💗
-
-I made a little something for your birthday.
-I hope you like it. 🤗
-
-I wanted to take you through a little story…
-our story. ❤️
+    <p>
+      I wanted to take you through a little story…<br>
+      our story. ❤️
     </p>
 
     <button onclick="nextPage()">
@@ -782,7 +556,6 @@ our story. ❤️
     </button>
 
   </div>
-
 </section>
 
 
@@ -791,45 +564,25 @@ our story. ❤️
 ========================= -->
 
 <section class="page">
+  <div class="card">
 
-  <div class="content">
+    <h2>Are you ready, mayileyyy? 😌❤️</h2>
 
-    <div class="illustration">
-      🙈
-    </div>
-
-    <h2>
-      Are you ready?
-    </h2>
-
-    <p class="subtitle">
-Are you ready, mayileyyy? 😌❤️
-
-I made this little surprise just for you.
+    <p>
+      I made this little surprise just for you.
     </p>
 
-    <div class="card">
+    <button onclick="readyYes()">
+      YES ❤️
+    </button>
 
-      <div class="question">
-        Are you really ready? 👀
-      </div>
+    <button class="secondary" onclick="readyNo()">
+      NO 😂
+    </button>
 
-      <button onclick="readyYes()">
-        YES ❤️
-      </button>
-
-      <button
-        class="secondary"
-        onclick="readyNo()">
-        NO 😂
-      </button>
-
-      <p id="notReadyText"></p>
-
-    </div>
+    <p id="notReadyText"></p>
 
   </div>
-
 </section>
 
 
@@ -838,37 +591,25 @@ I made this little surprise just for you.
 ========================= -->
 
 <section class="page">
+  <div class="card">
 
-  <div class="content">
+    <h2>Am I your favourite person?</h2>
 
-    <div class="illustration">
-      🥹
-    </div>
+    <p>
+      Always, right? 🥹❤️
+    </p>
 
-    <div class="card">
+    <button onclick="favouriteYes()">
+      Obviously YES ❤️
+    </button>
 
-      <div class="question">
-        Am I your favourite person?
-        <br>
-        Always, right? 🥹❤️
-      </div>
+    <button class="secondary" onclick="favouriteNo()">
+      Maybe NO 😂
+    </button>
 
-      <button onclick="favouriteYes()">
-        Obviously YES ❤️
-      </button>
-
-      <button
-        class="secondary"
-        onclick="favouriteNo()">
-        Maybe NO 😂
-      </button>
-
-      <p id="favouriteText"></p>
-
-    </div>
+    <p id="favouriteText"></p>
 
   </div>
-
 </section>
 
 
@@ -877,48 +618,41 @@ I made this little surprise just for you.
 ========================= -->
 
 <section class="page">
+  <div class="card">
 
-  <div class="content">
+    <h2>Things I love about you ❤️</h2>
 
-    <div class="illustration">
-      ❤️
-    </div>
+    <p>
+      You know what I love about you?
+      <br><br>
 
-    <h2>
-      Things I love about you
-    </h2>
+      The way you care for me and respect me,
+      and how you treat the people around you.
+      <br><br>
 
-    <div class="card">
+      I love how you're always ready to help others
+      and how I can always count on you whenever I need you.
+      <br><br>
 
-      <p class="story-text">
-You know what I love about you?
+      I admire how hardworking and passionate you are about your work.
+      <br><br>
 
-The way you care for me and respect me,
-and how you treat the people around you.
+      You always want to learn more, know more,
+      and understand things from every field.
+      <br><br>
 
-I love how you're always ready to help others
-and how I can always count on you whenever I need you.
+      Your curiosity about the world is something
+      I really admire about you.
+      <br><br>
 
-I admire how hardworking and passionate you are about your work.
+      There are so many little things that make you you…
+      <br>
+      and somehow, I fell in love with all of them. ❤️
+    </p>
 
-You always want to learn more, know more,
-and understand things from every field.
-
-Your curiosity about the world is something
-I really admire about you.
-
-There are so many little things that make you you…
-and somehow, I fell in love with all of them. ❤️
-      </p>
-
-    </div>
-
-    <button onclick="nextPage()">
-      Next ❤️
-    </button>
+    <button onclick="nextPage()">Next ❤️</button>
 
   </div>
-
 </section>
 
 
@@ -927,46 +661,32 @@ and somehow, I fell in love with all of them. ❤️
 ========================= -->
 
 <section class="page">
+  <div class="card">
 
-  <div class="content">
+    <h2>Our story began ❤️</h2>
 
-    <div class="eyebrow">
-      Chapter One
-    </div>
+    <img src="story began.jpeg" class="story-photo">
 
-    <h2>
-      Our story began ❤️
-    </h2>
+    <p>
+      We didn’t even talk at school… 🙈
+      <br><br>
 
-    <img
-      src="story began.jpeg"
-      alt="Our story began"
-      class="story-photo"
-    >
+      And somehow, look at us now.
+      <br><br>
 
-    <div class="card">
+      From barely talking to becoming close friends,
+      and from close friends to this. ❤️
+      <br><br>
 
-      <p class="story-text">
-We didn’t even talk at school… 🙈
+      Neither of us knew that we would end up together.
+      <br><br>
 
-And somehow, look at us now.
+      I guess destiny had a little surprise waiting for us. 🥹
+    </p>
 
-From barely talking to becoming close friends,
-and from close friends to this. ❤️
-
-Neither of us knew that we would end up together.
-
-I guess destiny had a little surprise waiting for us. 🥹
-      </p>
-
-    </div>
-
-    <button onclick="nextPage()">
-      Continue our story →
-    </button>
+    <button onclick="nextPage()">Next ❤️</button>
 
   </div>
-
 </section>
 
 
@@ -975,41 +695,24 @@ I guess destiny had a little surprise waiting for us. 🥹
 ========================= -->
 
 <section class="page">
+  <div class="card">
 
-  <div class="content">
+    <h2>Year 1 ❤️</h2>
 
-    <div class="year-number">
-      01
-    </div>
+    <img src="year1.jpeg" class="story-photo">
 
-    <div class="year-label">
-      YEAR ONE
-    </div>
+    <p>
+      Our first year was basically two shy people trying to figure out
+      how to talk to each other and what to even do around each other. 🙈
+      <br><br>
 
-    <img
-      src="year1.jpeg"
-      alt="Year One"
-      class="story-photo"
-    >
+      Everything felt new, a little awkward,
+      but somehow, we were slowly getting closer. ❤️
+    </p>
 
-    <div class="card">
-
-      <p class="story-text">
-Our first year was basically two shy people trying to figure out
-how to talk to each other and what to even do around each other. 🙈
-
-Everything felt new, a little awkward,
-but somehow, we were slowly getting closer. ❤️
-      </p>
-
-    </div>
-
-    <button onclick="nextPage()">
-      Year Two →
-    </button>
+    <button onclick="nextPage()">Next ❤️</button>
 
   </div>
-
 </section>
 
 
@@ -1018,42 +721,26 @@ but somehow, we were slowly getting closer. ❤️
 ========================= -->
 
 <section class="page">
+  <div class="card">
 
-  <div class="content">
+    <h2>Year 2 ❤️</h2>
 
-    <div class="year-number">
-      02
-    </div>
+    <img src="year 2.jpg" class="story-photo">
 
-    <div class="year-label">
-      YEAR TWO
-    </div>
+    <p>
+      Then came our trips to Pondicherry and Yercaud. 🥹❤️
+      <br><br>
 
-    <img
-      src="year 2.jpg"
-      alt="Year Two"
-      class="story-photo"
-    >
+      We made so many memories together,
+      laughed, explored, and slowly started understanding each other more.
+      <br><br>
 
-    <div class="card">
+      That year, I think we became more comfortable being us.
+    </p>
 
-      <p class="story-text">
-Then came our trips to Pondicherry and Yercaud. 🥹❤️
-
-We made so many memories together,
-laughed, explored, and slowly started understanding each other more.
-
-That year, I think we became more comfortable being us.
-      </p>
-
-    </div>
-
-    <button onclick="nextPage()">
-      Year Three →
-    </button>
+    <button onclick="nextPage()">Next ❤️</button>
 
   </div>
-
 </section>
 
 
@@ -1062,43 +749,27 @@ That year, I think we became more comfortable being us.
 ========================= -->
 
 <section class="page">
+  <div class="card">
 
-  <div class="content">
+    <h2>Year 3 ❤️</h2>
 
-    <div class="year-number">
-      03
-    </div>
+    <img src="year 3.jpg" class="story-photo">
 
-    <div class="year-label">
-      YEAR THREE
-    </div>
+    <p>
+      By then, we weren't just part of each other's lives anymore.
+      <br><br>
 
-    <img
-      src="year 3.jpg"
-      alt="Year Three"
-      class="story-photo"
-    >
+      We started meeting each other's friends,
+      getting involved in each other's worlds,
+      and becoming a bigger part of each other's lives.
+      <br><br>
 
-    <div class="card">
+      It felt like our little world was growing. ❤️
+    </p>
 
-      <p class="story-text">
-By then, we weren't just part of each other's lives anymore.
-
-We started meeting each other's friends,
-getting involved in each other's worlds,
-and becoming a bigger part of each other's lives.
-
-It felt like our little world was growing. ❤️
-      </p>
-
-    </div>
-
-    <button onclick="nextPage()">
-      Year Four →
-    </button>
+    <button onclick="nextPage()">Next ❤️</button>
 
   </div>
-
 </section>
 
 
@@ -1107,43 +778,28 @@ It felt like our little world was growing. ❤️
 ========================= -->
 
 <section class="page">
+  <div class="card">
 
-  <div class="content">
+    <h2>Year 4 ❤️</h2>
 
-    <div class="year-number">
-      04
-    </div>
+    <img src="year 4.jpeg" class="story-photo">
 
-    <div class="year-label">
-      YEAR FOUR
-    </div>
+    <p>
+      And then came our Chennai trips. 🥹
+      <br><br>
 
-    <img
-      src="year 4.jpeg"
-      alt="Year Four"
-      class="story-photo"
-    >
+      We explored more places, more cities,
+      and most importantly, we explored more about ourselves.
+      <br><br>
 
-    <div class="card">
+      Four years later, here we are…
+      <br>
+      still making memories together. ❤️
+    </p>
 
-      <p class="story-text">
-And then came our Chennai trips. 🥹
-
-We explored more places, more cities,
-and most importantly, we explored more about ourselves.
-
-Four years later, here we are…
-still making memories together. ❤️
-      </p>
-
-    </div>
-
-    <button onclick="nextPage()">
-      And then… 📸
-    </button>
+    <button onclick="nextPage()">Next ❤️</button>
 
   </div>
-
 </section>
 
 
@@ -1152,74 +808,54 @@ still making memories together. ❤️
 ========================= -->
 
 <section class="page">
+  <div class="card">
 
-  <div class="content">
-
-    <div class="illustration">
-      📸
-    </div>
-
-    <h2>
-      Our little album ❤️
-    </h2>
+    <h2>Our little album 📸❤️</h2>
 
     <p>
       Every picture has a story.
       And every story has a little piece of us. 🥹
     </p>
 
-    <div class="gallery">
+    <div class="album">
 
       <div class="polaroid">
-        <img src="1.jpeg" alt="Memory 1">
-        <span>Us ❤️</span>
+        <img src="1.jpeg">
       </div>
 
       <div class="polaroid">
-        <img src="2.jpg" alt="Memory 2">
-        <span>Another memory 🥹</span>
+        <img src="2.jpg">
       </div>
 
       <div class="polaroid">
-        <img src="3.jpg" alt="Memory 3">
-        <span>My favourite people ❤️</span>
+        <img src="3.jpg">
       </div>
 
       <div class="polaroid">
-        <img src="4.jpeg" alt="Memory 4">
-        <span>Little moments</span>
+        <img src="4.jpeg">
       </div>
 
       <div class="polaroid">
-        <img src="5.jpeg" alt="Memory 5">
-        <span>Happy us 🥰</span>
+        <img src="5.jpeg">
       </div>
 
       <div class="polaroid">
-        <img src="6.jpeg" alt="Memory 6">
-        <span>Forever memories</span>
+        <img src="6.jpeg">
       </div>
 
       <div class="polaroid">
-        <img src="7.jpeg" alt="Memory 7">
-        <span>Just us ❤️</span>
+        <img src="7.jpeg">
       </div>
 
       <div class="polaroid">
-        <img src="8.jpeg" alt="Memory 8">
-        <span>One more memory 🥹</span>
+        <img src="8.jpeg">
       </div>
 
     </div>
 
-    <br>
-
-    <button onclick="nextPage()">
-      One thing though… 👀
-    </button>
+    <button onclick="nextPage()">Next ❤️</button>
 
   </div>
-
 </section>
 
 
@@ -1228,48 +864,35 @@ still making memories together. ❤️
 ========================= -->
 
 <section class="page">
+  <div class="card">
 
-  <div class="content">
+    <h2>Funny things about you 😂</h2>
 
-    <div class="illustration">
-      😂
-    </div>
+    <img src="funny.jpeg" class="story-photo">
 
-    <h2>
+    <p>
       You know what makes me laugh about you? 😂
-    </h2>
+      <br><br>
 
-    <img
-      src="funny.jpeg"
-      alt="Funny memory"
-      class="story-photo"
-    >
+      The way you make those funny faces during our video calls.
+      Sometimes I don't even know what you're trying to do! 😭😂
+      <br><br>
 
-    <div class="card">
+      And the way you tease me whenever I mispronounce a word…
+      <br>
+      Excuse me, mayileyyy! 😒😂
+      <br><br>
 
-      <p class="story-text">
-The way you make those funny faces during our video calls.
+      I know you secretly enjoy catching me like that.
+      <br><br>
 
-Sometimes I don't even know what you're trying to do! 😭😂
+      But honestly, these silly little things are some of the moments
+      I love the most about us. ❤️
+    </p>
 
-And the way you tease me whenever I mispronounce a word…
-
-Excuse me, mayileyyy! 😒😂
-
-I know you secretly enjoy catching me like that.
-
-But honestly, these silly little things
-are some of the moments I love the most about us. ❤️
-      </p>
-
-    </div>
-
-    <button onclick="nextPage()">
-      Okay, now the serious part ❤️
-    </button>
+    <button onclick="nextPage()">Next ❤️</button>
 
   </div>
-
 </section>
 
 
@@ -1278,326 +901,291 @@ are some of the moments I love the most about us. ❤️
 ========================= -->
 
 <section class="page">
+  <div class="card">
 
-  <div class="content">
+    <h2>What I love about us ❤️</h2>
 
-    <div class="illustration">
-      💗
-    </div>
+    <p>
+      I love that we can be completely ourselves with each other.
+      <br><br>
 
-    <h2>
-      What I love about us
-    </h2>
+      I love our silly conversations,
+      our random jokes,
+      our little fights,
+      and the way we somehow always find our way back to each other.
+      <br><br>
 
-    <div class="love-list">
+      I love the memories we've made
+      and all the memories we haven't made yet.
+      <br><br>
 
-      <div class="love-item">
-        ❤️ The way we can be completely silly together.
-      </div>
+      Most of all,
+      I love that it's you and me. ❤️
+    </p>
 
-      <div class="love-item">
-        🥹 The way you understand me even when I don't explain everything.
-      </div>
-
-      <div class="love-item">
-        😂 The endless teasing and stupid jokes.
-      </div>
-
-      <div class="love-item">
-        🌍 The places we've explored together.
-      </div>
-
-      <div class="love-item">
-        📞 The calls before sleeping.
-      </div>
-
-      <div class="love-item">
-        🤍 The fact that somehow, through everything,
-        we're still choosing each other.
-      </div>
-
-    </div>
-
-    <button onclick="nextPage()">
-      I have something to tell you… 💌
-    </button>
+    <button onclick="nextPage()">Next ❤️</button>
 
   </div>
-
 </section>
 
 
 <!-- =========================
-     PAGE 13
+     PAGE 13 — LETTER ONLY
 ========================= -->
 
 <section class="page">
+  <div class="card">
 
-  <div class="content">
-
-    <div class="illustration">
-      💌
-    </div>
-
-    <h2>
-      A letter for you
-    </h2>
+    <h2>A little letter for you 💌</h2>
 
     <p>
-      Tap the envelope, Thangam. ❤️
+      I wrote something for you.
+      <br>
+      Open it when you're ready. ❤️
     </p>
 
-    <div
-      class="envelope"
-      onclick="openLetter()"
-    >
+    <div class="envelope" id="envelope" onclick="openLetter()">
 
-      <div style="font-size:55px;">
+      <div class="envelope-body"></div>
+
+      <div class="envelope-flap"></div>
+
+      <div class="envelope-heart">
         💌
       </div>
 
-      <strong>
-        For my Thangam ❤️
-      </strong>
-
-      <div
-        id="letter"
-        class="letter"
-      >
-Happy happy birthday, baby! 💗
-
-I really wish I could spend your birthday with you,
-be there beside you, and celebrate it with you.
-
-But for now, I just wish that we get to celebrate
-many, many more birthdays together. ❤️
-
-Thank you for tolerating me, handling all my moods,
-understanding me every time, and always being there for me.
-
-Thank you for being with me and taking care of me,
-even on the days when I’m not the easiest person to handle. 🥹
-
-You once surprised me by coming all the way to visit me,
-and I still remember how special that was.
-
-I’m sorry I couldn’t do any surprise for you this time. 🥺
-
-But I promise I’ll take care of you always,
-love you beyond words,
-and do my best to make you as happy
-as you make me.
-
-I’m so proud of you for the person you are
-and everything you're becoming. ❤️
-
-It’s almost 4 years of us,
-and I honestly can’t believe how fast these years have gone.
-
-We’ve made so many beautiful memories,
-and we’ve also faced so many things together.
-
-And somehow, through all of it,
-we're still here. 🥹❤️
-
-So cheers to making many more memories,
-exploring more places,
-laughing at the silliest things,
-and facing whatever comes our way together.
-
-Happy almost 4th anniversary to us! 🥂❤️
-
-And for your next adventure,
-I wish you nothing but the very best.
-
-I know it’s going to be the best one…
-because I’m with you la.
-
-Hehe. 😌❤️
-
-Sooo…
-
-Happy 29th Birthday, Tamilshan! 🎂💗
-
-Love you always and beyond.
-
-Ummmah 😘❤️
-
-— Mammu
-      </div>
-
     </div>
 
-    <button onclick="nextPage()">
-      One last question… 🥹
-    </button>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     PAGE 14
-     QUESTION PAGE
-========================= -->
-
-<section class="page">
-
-  <div class="content">
-
-    <div class="illustration">
-      🥹❤️
-    </div>
-
-    <div class="card">
-
-      <div class="question">
-        Will you stay with me through all the adventures,
-        birthdays, fights, laughs and everything that's yet to come? ❤️
-      </div>
-
-      <button onclick="finalQuestion()">
-        YES 🥹
-      </button>
-
-      <button onclick="finalQuestion()">
-        Always ❤️
-      </button>
-
-      <p id="finalAnswer"></p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     PAGE 15
-     CAKE
-========================= -->
-
-<section class="page">
-
-  <div class="content">
-
-    <div class="illustration">
-      🎂
-    </div>
-
-    <h2 id="cakeTitle">
-      Okay Thangam… 🎂
-    </h2>
-
-    <p id="cakeMessage">
-      Before you go… there's one tiny birthday thing left. ❤️
+    <p id="envelopeHint" class="small-text">
+      Tap the envelope 💌
     </p>
 
-    <div
-      id="countdown"
-      class="countdown">
-    </div>
 
-    <div
-      id="cakeArea"
-      class="cake-area"
-    >
+    <div class="letter" id="letter">
 
-      <div class="candle one">
-        <div class="flame"></div>
-      </div>
+      <p>
+        Happy happy birthday, baby! 💗
+      </p>
 
-      <div class="candle two">
-        <div class="flame"></div>
-      </div>
+      <p>
+        I really wish I could spend your birthday with you,
+        be there beside you, and celebrate it with you.
+        But for now, I just wish that we get to celebrate
+        many, many more birthdays together. ❤️
+      </p>
 
-      <div class="candle three">
-        <div class="flame"></div>
-      </div>
+      <p>
+        Thank you for tolerating me, handling all my moods,
+        understanding me every time, and always being there for me.
+        Thank you for being with me and taking care of me,
+        even on the days when I’m not the easiest person to handle. 🥹
+      </p>
 
-      <div class="cake"></div>
+      <p>
+        You once surprised me by coming all the way to visit me,
+        and I still remember how special that was.
+        I’m sorry I couldn’t do any surprise for you this time. 🥺
+        But I promise I’ll take care of you always,
+        love you beyond words, and do my best to make you
+        as happy as you make me.
+      </p>
 
-    </div>
+      <p>
+        I’m so proud of you for the person you are
+        and everything you're becoming. ❤️
+      </p>
 
-    <p
-      id="blowText"
-      class="blow">
-      Now blow the candles! 💨❤️
-    </p>
+      <p>
+        It’s almost 4 years of us,
+        and I honestly can’t believe how fast these years have gone.
+        We’ve made so many beautiful memories,
+        and we’ve also faced so many things together.
+        And somehow, through all of it, we're still here. 🥹❤️
+      </p>
 
-    <button
-      id="blowButton"
-      class="blow"
-      onclick="blowCandles()">
-      Blow candles 💨
-    </button>
+      <p>
+        So cheers to making many more memories,
+        exploring more places,
+        laughing at the silliest things,
+        and facing whatever comes our way together.
+      </p>
 
-    <button
-      id="continueButton"
-      class="blow"
-      onclick="nextPage()">
-      Continue ❤️
-    </button>
+      <p>
+        Happy almost 4th anniversary to us! 🥂❤️
+      </p>
 
-  </div>
+      <p>
+        And for your next adventure,
+        I wish you nothing but the very best.
+        I know it’s going to be the best one…
+        because I’m with you la. Hehe. 😌❤️
+      </p>
 
-</section>
+      <p>
+        Sooo…
+      </p>
 
+      <p>
+        Happy 29th Birthday, Tamilshan! 🎂💗
+      </p>
 
-<!-- =========================
-     PAGE 16
-========================= -->
+      <p>
+        Love you always and beyond.
+        <br>
+        Ummmah 😘❤️
+      </p>
 
-<section class="page">
-
-  <div class="content">
-
-    <div class="final-heart">
-      ❤️
-    </div>
-
-    <h1>
-      Happy Birthday, Thangam!
-    </h1>
-
-    <img
-      src="fav.jpeg"
-      alt="My favourite photo"
-      class="fav-photo"
-    >
-
-    <div class="card">
-
-      <p class="story-text">
-I knew you'd say yes. 😌❤️
-
-Happy birthday again, my baby.
-
-I hope this new year of your life
-brings you everything you've been working for.
-
-Keep working hard.
-Keep being curious.
-Keep being the amazing person you are.
-
-And remember…
-
-No matter where life takes us,
-Mammu is always going to be cheering for you. ❤️
-
-I love you always.
-
-Ummmah 😘❤️
-
-— Mammu
+      <p>
+        — Mammu
       </p>
 
     </div>
 
-  </div>
+    <button id="letterNext" onclick="nextPage()" style="display:none;">
+      Next ❤️
+    </button>
 
+  </div>
+</section>
+
+
+<!-- =========================
+     PAGE 14 — LAST QUESTION ONLY
+========================= -->
+
+<section class="page">
+  <div class="card">
+
+    <h2>One last question… ❤️</h2>
+
+    <p>
+      Will you stay with me through all the adventures,
+      birthdays, fights, laughs and everything that's yet to come? ❤️
+    </p>
+
+    <button onclick="finalQuestion()">
+      YES 🥹
+    </button>
+
+    <button onclick="finalQuestion()">
+      Always ❤️
+    </button>
+
+    <p id="finalAnswer"></p>
+
+  </div>
+</section>
+
+
+<!-- =========================
+     PAGE 15 — CAKE COUNTDOWN
+========================= -->
+
+<section class="page">
+  <div class="card">
+
+    <h2>Okay Thangam… 🎂</h2>
+
+    <p>
+      Before you go… there's one tiny birthday thing left. ❤️
+    </p>
+
+    <div id="countdown" class="countdown">
+      3
+    </div>
+
+    <div class="cake-area" id="cakeArea">
+
+      <p id="cakeText">
+        Make a wish, Thangam! 🥹❤️
+      </p>
+
+      <div class="cake">
+
+        <div class="cake-bottom"></div>
+
+        <div class="cake-middle"></div>
+
+        <div class="icing"></div>
+
+        <div class="candle one">
+          <div class="flame"></div>
+        </div>
+
+        <div class="candle two">
+          <div class="flame"></div>
+        </div>
+
+        <div class="candle three">
+          <div class="flame"></div>
+        </div>
+
+      </div>
+
+      <button id="blowButton" onclick="blowCandles()">
+        Blow the candles! 💨❤️
+      </button>
+
+    </div>
+
+    <button id="cakeNext" onclick="nextPage()" style="display:none;">
+      Continue ❤️
+    </button>
+
+  </div>
+</section>
+
+
+<!-- =========================
+     PAGE 16 — FINAL
+========================= -->
+
+<section class="page">
+  <div class="card">
+
+    <h2>Happy Birthday, Thangam! ❤️</h2>
+
+    <img src="fav.jpeg" class="final-photo">
+
+    <p>
+      I knew you'd say yes. 😌❤️
+    </p>
+
+    <p>
+      Happy birthday again, my baby.
+      <br><br>
+
+      I hope this new year of your life
+      brings you everything you've been working for.
+      <br><br>
+
+      Keep working hard.
+      <br>
+      Keep being curious.
+      <br>
+      Keep being the amazing person you are.
+    </p>
+
+    <p>
+      And remember…
+      <br><br>
+
+      No matter where life takes us,
+      <br>
+      Mammu is always going to be cheering for you. ❤️
+    </p>
+
+    <p>
+      I love you always.
+      <br>
+      Ummmah 😘❤️
+    </p>
+
+    <p>
+      — Mammu
+    </p>
+
+  </div>
 </section>
 
 
@@ -1605,75 +1193,46 @@ Ummmah 😘❤️
      PROGRESS DOTS
 ========================= -->
 
-<div
-  class="progress"
-  id="progress">
-</div>
+<div class="progress" id="progress"></div>
 
 
 <script>
 
 /* =========================
-   PAGE SYSTEM
+   PAGE NAVIGATION
 ========================= */
 
 let currentPage = 0;
 
-const pages =
-  document.querySelectorAll(".page");
+const pages = document.querySelectorAll(".page");
 
-const progress =
-  document.getElementById("progress");
+const progress = document.getElementById("progress");
 
-let cakeStarted = false;
-let finalDone = false;
+for (let i = 0; i < pages.length; i++) {
 
-
-/* Create progress dots */
-
-pages.forEach((page, index) => {
-
-  const dot =
-    document.createElement("div");
+  const dot = document.createElement("div");
 
   dot.className = "dot";
 
-  if (index === 0) {
+  if (i === 0) {
     dot.classList.add("active");
   }
 
   progress.appendChild(dot);
-
-});
-
-
-function updateProgress() {
-
-  const dots =
-    document.querySelectorAll(".dot");
-
-  dots.forEach((dot, index) => {
-
-    dot.classList.toggle(
-      "active",
-      index === currentPage
-    );
-
-  });
-
 }
 
 
 function showPage(index) {
 
-  pages.forEach(page => {
-    page.classList.remove("active");
-  });
+  if (index < 0 || index >= pages.length) {
+    return;
+  }
+
+  pages[currentPage].classList.remove("active");
 
   currentPage = index;
 
-  pages[currentPage]
-    .classList.add("active");
+  pages[currentPage].classList.add("active");
 
   updateProgress();
 
@@ -1683,38 +1242,40 @@ function showPage(index) {
   });
 
 
-  /* Start cake countdown */
+  /* Page 15 = index 14 */
 
-  if (
-    currentPage === 14 &&
-    !cakeStarted
-  ) {
-
+  if (currentPage === 14) {
     startCakeCountdown();
-
   }
-
 }
 
 
 function nextPage() {
 
-  if (
-    currentPage <
-    pages.length - 1
-  ) {
+  if (currentPage < pages.length - 1) {
+    showPage(currentPage + 1);
+  }
+}
 
-    showPage(
-      currentPage + 1
+
+function updateProgress() {
+
+  const dots = document.querySelectorAll(".dot");
+
+  dots.forEach((dot, index) => {
+
+    dot.classList.toggle(
+      "active",
+      index === currentPage
     );
 
-  }
-
+  });
 }
 
 
 /* =========================
    PAGE 2
+   READY QUESTION
 ========================= */
 
 function readyYes() {
@@ -1726,27 +1287,22 @@ function readyYes() {
 
 function readyNo() {
 
-  const text =
-    document.getElementById(
-      "notReadyText"
-    );
+  const text = document.getElementById("notReadyText");
 
   text.innerHTML =
-    "Too late 😂❤️ You're already inside. Click YES!";
+    "Nope! 😂❤️ You're not escaping now. Try YES!";
 
 }
 
 
 /* =========================
    PAGE 3
+   FAVOURITE QUESTION
 ========================= */
 
 function favouriteYes() {
 
-  const text =
-    document.getElementById(
-      "favouriteText"
-    );
+  const text = document.getElementById("favouriteText");
 
   text.innerHTML =
     "I knew it. 😌❤️ That's the only correct answer.";
@@ -1760,135 +1316,131 @@ function favouriteYes() {
 
 function favouriteNo() {
 
-  const text =
-    document.getElementById(
-      "favouriteText"
-    );
+  const text = document.getElementById("favouriteText");
 
   text.innerHTML =
     "Excuse me?! 😒😂 Try again, mayileyyy.";
 
-  setTimeout(() => {
-    nextPage();
-  }, 1200);
-
 }
 
 
 /* =========================
-   LETTER
+   PAGE 13
+   OPEN LETTER
 ========================= */
 
 function openLetter() {
 
-  const letter =
-    document.getElementById(
-      "letter"
-    );
+  const envelope = document.getElementById("envelope");
 
-  letter.classList.toggle(
-    "open"
-  );
+  const letter = document.getElementById("letter");
+
+  const hint = document.getElementById("envelopeHint");
+
+  const nextButton = document.getElementById("letterNext");
+
+
+  envelope.classList.add("open");
+
+  setTimeout(() => {
+
+    letter.classList.add("show");
+
+    hint.style.display = "none";
+
+    nextButton.style.display = "inline-block";
+
+  }, 500);
 
 }
 
 
 /* =========================
+   PAGE 14
    FINAL QUESTION
 ========================= */
 
 function finalQuestion() {
 
-  const answer =
-    document.getElementById(
-      "finalAnswer"
-    );
+  const answer = document.getElementById("finalAnswer");
 
   answer.innerHTML =
     "Good. Because you're stuck with me. 😌❤️";
 
   setTimeout(() => {
+
     nextPage();
+
   }, 1200);
 
 }
 
 
 /* =========================
+   PAGE 15
    CAKE COUNTDOWN
 ========================= */
 
+let cakeStarted = false;
+
+
 function startCakeCountdown() {
+
+  if (cakeStarted) {
+    return;
+  }
 
   cakeStarted = true;
 
   const countdown =
-    document.getElementById(
-      "countdown"
-    );
+    document.getElementById("countdown");
 
-  const title =
-    document.getElementById(
-      "cakeTitle"
-    );
-
-  const message =
-    document.getElementById(
-      "cakeMessage"
-    );
+  const cakeArea =
+    document.getElementById("cakeArea");
 
   let number = 3;
 
-  countdown.innerHTML =
-    number;
+  countdown.innerText = number;
 
 
-  const timer =
-    setInterval(() => {
+  const timer = setInterval(() => {
 
-      number--;
+    number--;
 
-      if (number > 0) {
+    if (number > 0) {
 
-        countdown.innerHTML =
-          number;
+      countdown.innerText = number;
 
-      }
+      countdown.style.animation = "none";
 
-      else {
+      void countdown.offsetWidth;
 
-        clearInterval(timer);
+      countdown.style.animation = "pop 0.6s ease";
 
-        countdown.innerHTML =
-          "🎂";
+    } else {
 
-        title.innerHTML =
-          "Make a wish, Thangam! 🥹❤️";
+      clearInterval(timer);
 
-        message.innerHTML =
-          "Your birthday cake is waiting…";
+      countdown.style.display = "none";
 
-        document
-          .getElementById(
-            "cakeArea"
-          )
-          .classList.add("show");
+      cakeArea.style.display = "block";
 
-        document
-          .getElementById(
-            "blowText"
-          )
-          .classList.add("show");
+      document.getElementById("cakeText").innerHTML =
+        "Your birthday cake is waiting… 🎂❤️";
 
-        document
-          .getElementById(
-            "blowButton"
-          )
-          .classList.add("show");
+      setTimeout(() => {
 
-      }
+        document.getElementById("cakeText").innerHTML =
+          "Now blow the candles! 💨❤️";
 
-    }, 1000);
+        document.getElementById("blowButton").style.display =
+          "inline-block";
+
+      }, 1000);
+
+    }
+
+  }, 1000);
 
 }
 
@@ -1899,61 +1451,42 @@ function startCakeCountdown() {
 
 function blowCandles() {
 
-  if (finalDone)
-    return;
+  const flames =
+    document.querySelectorAll(".flame");
 
-  finalDone = true;
+  flames.forEach(flame => {
 
+    flame.style.display = "none";
 
-  document
-    .querySelectorAll(".flame")
-    .forEach(flame => {
-
-      flame.classList.add(
-        "off"
-      );
-
-    });
+  });
 
 
-  document
-    .getElementById(
-      "blowButton"
-    )
-    .style.display = "none";
+  document.getElementById("cakeText").innerHTML =
+    "Wish made. Candles out. Birthday officially started! 🥹❤️";
 
 
-  document
-    .getElementById(
-      "blowText"
-    )
-    .innerHTML =
-      "Wish made. Candles out. Birthday officially started! 🥹❤️";
+  document.getElementById("blowButton").style.display =
+    "none";
 
 
-  document
-    .getElementById(
-      "cakeTitle"
-    )
-    .innerHTML =
-      "Happy Birthday, Thangam! ❤️";
+  setTimeout(() => {
 
+    document.getElementById("cakeNext").style.display =
+      "inline-block";
 
-  document
-    .getElementById(
-      "cakeMessage"
-    )
-    .innerHTML =
-      "Your birthday officially begins now. 🎂✨";
-
-
-  document
-    .getElementById(
-      "continueButton"
-    )
-    .classList.add("show");
+  }, 700);
 
 }
+
+
+/* =========================
+   NO KEYBOARD NAVIGATION
+========================= */
+
+/*
+   Keyboard arrow navigation intentionally disabled.
+   Pages move only when the website buttons are clicked.
+*/
 
 </script>
 
