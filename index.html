@@ -6,6 +6,11 @@
 <title>Happy Birthday Tamilshan ❤️</title>
 
 <style>
+
+/* =========================
+   WARM VINTAGE SCRAPBOOK
+========================= */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,21 +18,44 @@
 }
 
 body {
-  font-family: "Poppins", "Segoe UI", sans-serif;
-  background: linear-gradient(135deg, #fff5f8, #f8f0ff, #fff9ed);
-  color: #5d4650;
+  font-family: "Segoe UI", sans-serif;
+  color: #55443d;
   min-height: 100vh;
   overflow-x: hidden;
+
+  background:
+    radial-gradient(circle at 15% 20%, rgba(183, 139, 103, 0.10) 0 2px, transparent 3px),
+    radial-gradient(circle at 80% 70%, rgba(160, 116, 91, 0.08) 0 2px, transparent 3px),
+    #f3eadc;
+}
+
+/* subtle paper texture */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgba(80, 55, 45, 0.025) 4px
+    );
+  z-index: 0;
 }
 
 .page {
   display: none;
   min-height: 100vh;
   width: 100%;
-  padding: 45px 20px;
+  padding: 45px 20px 80px;
   align-items: center;
   justify-content: center;
-  animation: fadeIn 0.7s ease;
+  position: relative;
+  z-index: 1;
+  animation: pageIn 0.7s ease;
 }
 
 .page.active {
@@ -39,58 +67,53 @@ body {
   text-align: center;
 }
 
-@keyframes fadeIn {
+@keyframes pageIn {
   from {
     opacity: 0;
-    transform: translateY(15px);
+    transform: translateY(18px) rotate(-0.3deg);
   }
+
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) rotate(0);
   }
 }
 
-/* Decorative */
-.illustration {
-  width: 90px;
-  height: 90px;
-  margin: 0 auto 25px;
-  border-radius: 50%;
-  background: #ffe0eb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 42px;
-  box-shadow: 0 10px 30px rgba(170, 100, 130, 0.15);
-}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
 
 .eyebrow {
-  font-size: 14px;
-  letter-spacing: 2px;
+  font-size: 13px;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  color: #b77b91;
-  margin-bottom: 12px;
+  color: #9a725e;
+  margin-bottom: 14px;
+}
+
+h1,
+h2 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  color: #754f42;
 }
 
 h1 {
-  font-family: Georgia, serif;
-  font-size: clamp(38px, 7vw, 70px);
-  color: #9d526e;
-  line-height: 1.1;
+  font-size: clamp(38px, 7vw, 68px);
+  line-height: 1.12;
   margin-bottom: 22px;
 }
 
 h2 {
-  font-family: Georgia, serif;
-  color: #9d526e;
   font-size: clamp(30px, 5vw, 48px);
   margin-bottom: 20px;
 }
 
 p {
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.9;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 .subtitle {
@@ -99,81 +122,185 @@ p {
   white-space: pre-line;
 }
 
+
+/* =========================
+   SCRAPBOOK DECORATION
+========================= */
+
+.illustration {
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 24px;
+
+  border-radius: 50%;
+  background: #ead6c3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 40px;
+
+  box-shadow:
+    0 8px 20px rgba(80, 55, 45, 0.12);
+
+  transform: rotate(-3deg);
+}
+
+.illustration::after {
+  content: "";
+  position: absolute;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
 button {
-  border: none;
-  border-radius: 30px;
-  padding: 14px 26px;
+  border: 1px solid #9d7560;
+  border-radius: 5px;
+
+  padding: 13px 25px;
   margin: 7px;
+
   font-size: 15px;
   font-weight: 600;
+
   cursor: pointer;
-  background: #e89ab3;
-  color: white;
-  box-shadow: 0 8px 20px rgba(190, 100, 130, 0.2);
+
+  background: #9d7560;
+  color: #fffaf3;
+
+  box-shadow:
+    0 5px 12px rgba(80, 55, 45, 0.13);
+
   transition: 0.25s;
 }
 
 button:hover {
-  transform: translateY(-3px) scale(1.02);
+  transform: translateY(-3px) rotate(-1deg);
 }
 
 .secondary {
-  background: #f4d6e0;
-  color: #754c5b;
+  background: #e5d2c0;
+  color: #684c40;
+  border-color: #b7927b;
 }
 
+
+/* =========================
+   SCRAPBOOK CARD
+========================= */
+
 .card {
-  background: rgba(255,255,255,0.78);
-  border: 1px solid rgba(220,170,190,0.3);
-  border-radius: 28px;
+  position: relative;
+
+  background: #fffaf1;
+
+  border: 1px solid #d8c4ae;
+
   padding: 35px;
-  box-shadow: 0 15px 45px rgba(130,90,110,0.1);
+
+  border-radius: 3px;
+
+  box-shadow:
+    0 12px 30px rgba(80, 55, 45, 0.12);
+
   margin: 20px auto;
+
+  transform: rotate(-0.3deg);
+}
+
+.card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 75px;
+  height: 20px;
+
+  top: -10px;
+  left: 50%;
+
+  transform: translateX(-50%) rotate(-2deg);
+
+  background: rgba(205, 174, 143, 0.65);
+
+  box-shadow:
+    0 2px 5px rgba(80, 55, 45, 0.08);
 }
 
 .question {
   font-family: Georgia, serif;
   font-size: 28px;
-  color: #8d4f67;
+  color: #754f42;
   margin-bottom: 25px;
 }
 
 
-}
+/* =========================
+   STORY PHOTOS
+========================= */
+
 .story-photo {
   width: min(360px, 80vw);
   height: 300px;
+
   object-fit: contain;
-  border-radius: 25px;
-  margin: 15px auto 25px;
+
+  border-radius: 4px;
+
+  padding: 10px;
+
+  background: #fffaf1;
+
+  border: 1px solid #d4c0aa;
+
+  margin: 18px auto 28px;
+
   display: block;
-  background: #fff;
-  box-shadow: 0 15px 35px rgba(100,70,90,0.18);
+
+  box-shadow:
+    0 12px 25px rgba(80, 55, 45, 0.16);
+
+  transform: rotate(-1.5deg);
 }
+
+.story-photo:nth-of-type(even) {
+  transform: rotate(1.5deg);
 }
-}
+
 .story-text {
   max-width: 720px;
   margin: auto;
   white-space: pre-line;
 }
 
-/* Year cards */
+
+/* =========================
+   YEAR PAGES
+========================= */
+
 .year-number {
   font-family: Georgia, serif;
   font-size: 70px;
-  color: #d1849c;
-  margin-bottom: 5px;
+  color: #a87d63;
+  margin-bottom: 3px;
 }
 
 .year-label {
-  color: #a35c76;
+  color: #86604e;
   font-weight: 600;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
 }
 
-/* Gallery */
+
+/* =========================
+   POLAROID ALBUM
+========================= */
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -182,15 +309,24 @@ button:hover {
 }
 
 .polaroid {
-  background: white;
+  position: relative;
+
+  background: #fffdf7;
+
   padding: 10px 10px 18px;
-  border-radius: 5px;
-  box-shadow: 0 10px 25px rgba(90,60,70,0.14);
+
+  border: 1px solid #ddd0bd;
+
+  border-radius: 2px;
+
+  box-shadow:
+    0 10px 22px rgba(80, 55, 45, 0.15);
+
   transition: 0.3s;
 }
 
 .polaroid:hover {
-  transform: rotate(0deg) translateY(-7px);
+  transform: translateY(-7px) rotate(0deg);
 }
 
 .polaroid:nth-child(odd) {
@@ -204,20 +340,29 @@ button:hover {
 .polaroid img {
   width: 100%;
   height: 230px;
+
   object-fit: contain;
+
   display: block;
+
   background: #fff;
-}
 }
 
 .polaroid span {
   display: block;
   margin-top: 10px;
+
   font-family: Georgia, serif;
-  color: #8c5969;
+
+  color: #795849;
+  font-size: 14px;
 }
 
-/* Love list */
+
+/* =========================
+   LOVE LIST
+========================= */
+
 .love-list {
   max-width: 700px;
   margin: 25px auto;
@@ -225,34 +370,67 @@ button:hover {
 }
 
 .love-item {
-  background: rgba(255,255,255,0.75);
-  margin: 12px 0;
-  padding: 18px 22px;
-  border-radius: 18px;
+  position: relative;
+
+  background: #fffaf1;
+
+  border-left: 4px solid #b88a70;
+
+  margin: 14px 0;
+
+  padding: 17px 22px;
+
   line-height: 1.7;
+
+  box-shadow:
+    0 5px 15px rgba(80, 55, 45, 0.08);
+
+  transform: rotate(-0.3deg);
 }
 
-/* Envelope */
+.love-item:nth-child(even) {
+  transform: rotate(0.3deg);
+}
+
+
+/* =========================
+   ENVELOPE
+========================= */
+
 .envelope {
   width: min(500px, 90%);
+
   margin: 30px auto;
+
   padding: 35px;
-  background: #fff7fa;
-  border: 2px dashed #dda0b4;
-  border-radius: 20px;
+
+  background: #fffaf1;
+
+  border: 2px dashed #b8957e;
+
+  border-radius: 4px;
+
   cursor: pointer;
+
   transition: 0.3s;
+
+  box-shadow:
+    0 10px 25px rgba(80, 55, 45, 0.12);
 }
 
 .envelope:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) rotate(-1deg);
 }
 
 .letter {
   display: none;
+
   text-align: left;
+
   margin-top: 25px;
+
   white-space: pre-line;
+
   line-height: 1.9;
 }
 
@@ -260,32 +438,63 @@ button:hover {
   display: block;
 }
 
-/* Favourite photo */
+
+/* =========================
+   FINAL PHOTO
+========================= */
+
 .fav-photo {
   width: min(430px, 88%);
   max-height: 500px;
+
   object-fit: cover;
-  border-radius: 28px;
+
+  border-radius: 4px;
+
+  padding: 10px;
+
+  background: #fffaf1;
+
+  border: 1px solid #d4c0aa;
+
   margin: 20px auto;
+
   display: block;
-  box-shadow: 0 18px 40px rgba(100,70,90,0.18);
+
+  box-shadow:
+    0 18px 40px rgba(80, 55, 45, 0.18);
+
+  transform: rotate(1deg);
 }
 
-/* Cake page */
+
+/* =========================
+   CAKE PAGE
+========================= */
+
 .countdown {
   font-family: Georgia, serif;
+
   font-size: 100px;
-  color: #d56f91;
+
+  color: #9a604d;
+
   min-height: 125px;
+
   display: flex;
+
   justify-content: center;
+
   align-items: center;
 }
 
 .cake-area {
   display: none;
+
   margin: 20px auto 30px;
+
   position: relative;
+
   width: 230px;
   height: 190px;
 }
@@ -296,43 +505,65 @@ button:hover {
 
 .cake {
   position: absolute;
+
   bottom: 15px;
   left: 25px;
+
   width: 180px;
   height: 95px;
-  background: #f3a9bd;
+
+  background: #c98f7c;
+
   border-radius: 12px 12px 20px 20px;
-  box-shadow: inset 0 -15px rgba(210,115,145,0.18);
+
+  box-shadow:
+    inset 0 -15px rgba(100, 60, 50, 0.12);
 }
 
 .cake:before {
   content: "";
+
   position: absolute;
+
   left: 0;
   top: -22px;
+
   width: 180px;
   height: 35px;
-  background: #fff0f5;
+
+  background: #fff2df;
+
   border-radius: 50%;
 }
 
 .cake:after {
   content: "♡  ♡  ♡";
+
   position: absolute;
+
   top: 37px;
+
   width: 100%;
+
   text-align: center;
+
   color: white;
+
   font-size: 20px;
 }
 
 .candle {
   position: absolute;
+
   width: 12px;
   height: 48px;
-  background: #f7d18b;
+
+  background: #d8b47a;
+
   top: 42px;
+
   border-radius: 5px;
+
   z-index: 3;
 }
 
@@ -350,12 +581,17 @@ button:hover {
 
 .flame {
   position: absolute;
+
   width: 14px;
   height: 20px;
-  background: #ffb347;
-  border-radius: 50% 50% 50% 50%;
+
+  background: #d8874e;
+
+  border-radius: 50%;
+
   top: -19px;
   left: -1px;
+
   animation: flicker 0.5s infinite alternate;
 }
 
@@ -364,8 +600,13 @@ button:hover {
 }
 
 @keyframes flicker {
-  from { transform: scale(0.9); }
-  to { transform: scale(1.1); }
+  from {
+    transform: scale(0.9);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
 }
 
 .blow {
@@ -373,53 +614,82 @@ button:hover {
 }
 
 .blow.show {
-  display: block;
+  display: inline-block;
 }
 
-/* Progress */
+
+/* =========================
+   FINAL PAGE
+========================= */
+
+.final-heart {
+  font-size: 70px;
+
+  animation: heartbeat 1.2s infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+
+/* =========================
+   PROGRESS DOTS
+========================= */
+
 .progress {
   position: fixed;
+
   bottom: 17px;
   left: 50%;
+
   transform: translateX(-50%);
+
   display: flex;
+
   gap: 6px;
+
   z-index: 20;
 }
 
 .dot {
   width: 7px;
   height: 7px;
+
   border-radius: 50%;
-  background: #e8c2ce;
+
+  background: #cdb6a2;
+
   transition: 0.3s;
 }
 
 .dot.active {
   width: 22px;
+
   border-radius: 10px;
-  background: #c97c96;
+
+  background: #906451;
 }
 
-/* Final */
-.final-heart {
-  font-size: 70px;
-  animation: heartbeat 1.2s infinite;
-}
 
-@keyframes heartbeat {
-  0%,100% { transform: scale(1); }
-  50% { transform: scale(1.12); }
-}
+/* =========================
+   MOBILE
+========================= */
 
-/* Mobile */
 @media (max-width: 700px) {
+
   .page {
-    padding: 35px 15px 60px;
+    padding: 35px 15px 65px;
   }
 
   .card {
-    padding: 25px 18px;
+    padding: 27px 18px;
   }
 
   p {
@@ -427,9 +697,18 @@ button:hover {
     line-height: 1.8;
   }
 
+  .story-photo {
+    width: min(330px, 82vw);
+    height: 280px;
+  }
+
   .gallery {
     grid-template-columns: repeat(2, 1fr);
     gap: 14px;
+  }
+
+  .polaroid img {
+    height: 190px;
   }
 
   .year-number {
@@ -442,6 +721,7 @@ button:hover {
 }
 
 @media (max-width: 420px) {
+
   .gallery {
     grid-template-columns: 1fr 1fr;
   }
@@ -453,21 +733,39 @@ button:hover {
   button {
     padding: 12px 20px;
   }
+
+  .story-photo {
+    height: 260px;
+  }
+
+  .polaroid img {
+    height: 165px;
+  }
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- PAGE 1 -->
+
+<!-- =========================
+     PAGE 1
+========================= -->
+
 <section class="page active">
+
   <div class="content">
 
     <div class="illustration">🎂</div>
 
-    <div class="eyebrow">A little surprise from Mammu</div>
+    <div class="eyebrow">
+      A little surprise from Mammu
+    </div>
 
-    <h1>Happy Birthday Tamilshan</h1>
+    <h1>
+      Happy Birthday Tamilshan
+    </h1>
 
     <p class="subtitle">
 Happy birthday, baby! 💗
@@ -479,19 +777,30 @@ I wanted to take you through a little story…
 our story. ❤️
     </p>
 
-    <button onclick="nextPage()">Open my surprise 🎀</button>
+    <button onclick="nextPage()">
+      Open my surprise 🎀
+    </button>
 
   </div>
+
 </section>
 
 
-<!-- PAGE 2 -->
+<!-- =========================
+     PAGE 2
+========================= -->
+
 <section class="page">
+
   <div class="content">
 
-    <div class="illustration">🙈</div>
+    <div class="illustration">
+      🙈
+    </div>
 
-    <h2>Are you ready?</h2>
+    <h2>
+      Are you ready?
+    </h2>
 
     <p class="subtitle">
 Are you ready, mayileyyy? 😌❤️
@@ -500,26 +809,41 @@ I made this little surprise just for you.
     </p>
 
     <div class="card">
-      <div class="question">Are you really ready? 👀</div>
 
-      <button onclick="nextPage()">YES ❤️</button>
+      <div class="question">
+        Are you really ready? 👀
+      </div>
 
-      <button class="secondary" onclick="notReady()">
+      <button onclick="readyYes()">
+        YES ❤️
+      </button>
+
+      <button
+        class="secondary"
+        onclick="readyNo()">
         NO 😂
       </button>
 
       <p id="notReadyText"></p>
+
     </div>
 
   </div>
+
 </section>
 
 
-<!-- PAGE 3 -->
+<!-- =========================
+     PAGE 3
+========================= -->
+
 <section class="page">
+
   <div class="content">
 
-    <div class="illustration">🥹</div>
+    <div class="illustration">
+      🥹
+    </div>
 
     <div class="card">
 
@@ -529,9 +853,13 @@ I made this little surprise just for you.
         Always, right? 🥹❤️
       </div>
 
-      <button onclick="favouriteYes()">Obviously YES ❤️</button>
+      <button onclick="favouriteYes()">
+        Obviously YES ❤️
+      </button>
 
-      <button class="secondary" onclick="favouriteNo()">
+      <button
+        class="secondary"
+        onclick="favouriteNo()">
         Maybe NO 😂
       </button>
 
@@ -540,18 +868,28 @@ I made this little surprise just for you.
     </div>
 
   </div>
+
 </section>
 
 
-<!-- PAGE 4 -->
+<!-- =========================
+     PAGE 4
+========================= -->
+
 <section class="page">
+
   <div class="content">
 
-    <div class="illustration">❤️</div>
+    <div class="illustration">
+      ❤️
+    </div>
 
-    <h2>Things I love about you</h2>
+    <h2>
+      Things I love about you
+    </h2>
 
     <div class="card">
+
       <p class="story-text">
 You know what I love about you?
 
@@ -572,21 +910,33 @@ I really admire about you.
 There are so many little things that make you you…
 and somehow, I fell in love with all of them. ❤️
       </p>
+
     </div>
 
-    <button onclick="nextPage()">Next ❤️</button>
+    <button onclick="nextPage()">
+      Next ❤️
+    </button>
 
   </div>
+
 </section>
 
 
-<!-- PAGE 5 -->
+<!-- =========================
+     PAGE 5
+========================= -->
+
 <section class="page">
+
   <div class="content">
 
-    <div class="eyebrow">Chapter One</div>
+    <div class="eyebrow">
+      Chapter One
+    </div>
 
-    <h2>Our story began ❤️</h2>
+    <h2>
+      Our story began ❤️
+    </h2>
 
     <img
       src="story began.jpeg"
@@ -595,6 +945,7 @@ and somehow, I fell in love with all of them. ❤️
     >
 
     <div class="card">
+
       <p class="story-text">
 We didn’t even talk at school… 🙈
 
@@ -607,20 +958,33 @@ Neither of us knew that we would end up together.
 
 I guess destiny had a little surprise waiting for us. 🥹
       </p>
+
     </div>
 
-    <button onclick="nextPage()">Continue our story →</button>
+    <button onclick="nextPage()">
+      Continue our story →
+    </button>
 
   </div>
+
 </section>
 
 
-<!-- PAGE 6 -->
+<!-- =========================
+     PAGE 6
+========================= -->
+
 <section class="page">
+
   <div class="content">
 
-    <div class="year-number">01</div>
-    <div class="year-label">YEAR ONE</div>
+    <div class="year-number">
+      01
+    </div>
+
+    <div class="year-label">
+      YEAR ONE
+    </div>
 
     <img
       src="year1.jpeg"
@@ -629,6 +993,7 @@ I guess destiny had a little surprise waiting for us. 🥹
     >
 
     <div class="card">
+
       <p class="story-text">
 Our first year was basically two shy people trying to figure out
 how to talk to each other and what to even do around each other. 🙈
@@ -636,20 +1001,33 @@ how to talk to each other and what to even do around each other. 🙈
 Everything felt new, a little awkward,
 but somehow, we were slowly getting closer. ❤️
       </p>
+
     </div>
 
-    <button onclick="nextPage()">Year Two →</button>
+    <button onclick="nextPage()">
+      Year Two →
+    </button>
 
   </div>
+
 </section>
 
 
-<!-- PAGE 7 -->
+<!-- =========================
+     PAGE 7
+========================= -->
+
 <section class="page">
+
   <div class="content">
 
-    <div class="year-number">02</div>
-    <div class="year-label">YEAR TWO</div>
+    <div class="year-number">
+      02
+    </div>
+
+    <div class="year-label">
+      YEAR TWO
+    </div>
 
     <img
       src="year 2.jpg"
@@ -658,6 +1036,7 @@ but somehow, we were slowly getting closer. ❤️
     >
 
     <div class="card">
+
       <p class="story-text">
 Then came our trips to Pondicherry and Yercaud. 🥹❤️
 
@@ -666,20 +1045,33 @@ laughed, explored, and slowly started understanding each other more.
 
 That year, I think we became more comfortable being us.
       </p>
+
     </div>
 
-    <button onclick="nextPage()">Year Three →</button>
+    <button onclick="nextPage()">
+      Year Three →
+    </button>
 
   </div>
+
 </section>
 
 
-<!-- PAGE 8 -->
+<!-- =========================
+     PAGE 8
+========================= -->
+
 <section class="page">
+
   <div class="content">
 
-    <div class="year-number">03</div>
-    <div class="year-label">YEAR THREE</div>
+    <div class="year-number">
+      03
+    </div>
+
+    <div class="year-label">
+      YEAR THREE
+    </div>
 
     <img
       src="year 3.jpg"
@@ -688,6 +1080,7 @@ That year, I think we became more comfortable being us.
     >
 
     <div class="card">
+
       <p class="story-text">
 By then, we weren't just part of each other's lives anymore.
 
@@ -697,20 +1090,33 @@ and becoming a bigger part of each other's lives.
 
 It felt like our little world was growing. ❤️
       </p>
+
     </div>
 
-    <button onclick="nextPage()">Year Four →</button>
+    <button onclick="nextPage()">
+      Year Four →
+    </button>
 
   </div>
+
 </section>
 
 
-<!-- PAGE 9 -->
+<!-- =========================
+     PAGE 9
+========================= -->
+
 <section class="page">
+
   <div class="content">
 
-    <div class="year-number">04</div>
-    <div class="year-label">YEAR FOUR</div>
+    <div class="year-number">
+      04
+    </div>
+
+    <div class="year-label">
+      YEAR FOUR
+    </div>
 
     <img
       src="year 4.jpeg"
@@ -719,6 +1125,7 @@ It felt like our little world was growing. ❤️
     >
 
     <div class="card">
+
       <p class="story-text">
 And then came our Chennai trips. 🥹
 
@@ -728,25 +1135,37 @@ and most importantly, we explored more about ourselves.
 Four years later, here we are…
 still making memories together. ❤️
       </p>
+
     </div>
 
-    <button onclick="nextPage()">And then… 📸</button>
+    <button onclick="nextPage()">
+      And then… 📸
+    </button>
 
   </div>
+
 </section>
 
 
-<!-- PAGE 10 -->
+<!-- =========================
+     PAGE 10
+========================= -->
+
 <section class="page">
+
   <div class="content">
 
-    <div class="illustration">📸</div>
+    <div class="illustration">
+      📸
+    </div>
 
-    <h2>Our little album ❤️</h2>
+    <h2>
+      Our little album ❤️
+    </h2>
 
     <p>
-Every picture has a story.
-And every story has a little piece of us. 🥹
+      Every picture has a story.
+      And every story has a little piece of us. 🥹
     </p>
 
     <div class="gallery">
@@ -795,19 +1214,30 @@ And every story has a little piece of us. 🥹
 
     <br>
 
-    <button onclick="nextPage()">One thing though… 👀</button>
+    <button onclick="nextPage()">
+      One thing though… 👀
+    </button>
 
   </div>
+
 </section>
 
 
-<!-- PAGE 11 -->
+<!-- =========================
+     PAGE 11
+========================= -->
+
 <section class="page">
+
   <div class="content">
 
-    <div class="illustration">😂</div>
+    <div class="illustration">
+      😂
+    </div>
 
-    <h2>You know what makes me laugh about you? 😂</h2>
+    <h2>
+      You know what makes me laugh about you? 😂
+    </h2>
 
     <img
       src="funny.jpeg"
@@ -816,6 +1246,7 @@ And every story has a little piece of us. 🥹
     >
 
     <div class="card">
+
       <p class="story-text">
 The way you make those funny faces during our video calls.
 
@@ -830,21 +1261,33 @@ I know you secretly enjoy catching me like that.
 But honestly, these silly little things
 are some of the moments I love the most about us. ❤️
       </p>
+
     </div>
 
-    <button onclick="nextPage()">Okay, now the serious part ❤️</button>
+    <button onclick="nextPage()">
+      Okay, now the serious part ❤️
+    </button>
 
   </div>
+
 </section>
 
 
-<!-- PAGE 12 -->
+<!-- =========================
+     PAGE 12
+========================= -->
+
 <section class="page">
+
   <div class="content">
 
-    <div class="illustration">💗</div>
+    <div class="illustration">
+      💗
+    </div>
 
-    <h2>What I love about us</h2>
+    <h2>
+      What I love about us
+    </h2>
 
     <div class="love-list">
 
@@ -875,29 +1318,52 @@ are some of the moments I love the most about us. ❤️
 
     </div>
 
-    <button onclick="nextPage()">I have something to tell you… 💌</button>
+    <button onclick="nextPage()">
+      I have something to tell you… 💌
+    </button>
 
   </div>
+
 </section>
 
 
-<!-- PAGE 13 -->
+<!-- =========================
+     PAGE 13
+========================= -->
+
 <section class="page">
+
   <div class="content">
 
-    <div class="illustration">💌</div>
+    <div class="illustration">
+      💌
+    </div>
 
-    <h2>A letter for you</h2>
+    <h2>
+      A letter for you
+    </h2>
 
-    <p>Tap the envelope, Thangam. ❤️</p>
+    <p>
+      Tap the envelope, Thangam. ❤️
+    </p>
 
-    <div class="envelope" onclick="openLetter()">
+    <div
+      class="envelope"
+      onclick="openLetter()"
+    >
 
-      <div style="font-size:55px;">💌</div>
+      <div style="font-size:55px;">
+        💌
+      </div>
 
-      <strong>For my Thangam ❤️</strong>
+      <strong>
+        For my Thangam ❤️
+      </strong>
 
-      <div id="letter" class="letter">
+      <div
+        id="letter"
+        class="letter"
+      >
 Happy happy birthday, baby! 💗
 
 I really wish I could spend your birthday with you,
@@ -962,17 +1428,27 @@ Ummmah 😘❤️
 
     </div>
 
-    <button onclick="nextPage()">One last question… 🥹</button>
+    <button onclick="nextPage()">
+      One last question… 🥹
+    </button>
 
   </div>
+
 </section>
 
 
-<!-- PAGE 14 -->
+<!-- =========================
+     PAGE 14
+     QUESTION PAGE
+========================= -->
+
 <section class="page">
+
   <div class="content">
 
-    <div class="illustration">🥹❤️</div>
+    <div class="illustration">
+      🥹❤️
+    </div>
 
     <div class="card">
 
@@ -981,33 +1457,53 @@ Ummmah 😘❤️
         birthdays, fights, laughs and everything that's yet to come? ❤️
       </div>
 
-      <button onclick="finalQuestion()">YES 🥹</button>
+      <button onclick="finalQuestion()">
+        YES 🥹
+      </button>
 
-      <button onclick="finalQuestion()">Always ❤️</button>
+      <button onclick="finalQuestion()">
+        Always ❤️
+      </button>
 
       <p id="finalAnswer"></p>
 
     </div>
 
   </div>
+
 </section>
 
 
-<!-- PAGE 15 : CAKE COUNTDOWN -->
+<!-- =========================
+     PAGE 15
+     CAKE
+========================= -->
+
 <section class="page">
+
   <div class="content">
 
-    <div class="illustration">🎂</div>
+    <div class="illustration">
+      🎂
+    </div>
 
-    <h2 id="cakeTitle">Okay Thangam… 🎂</h2>
+    <h2 id="cakeTitle">
+      Okay Thangam… 🎂
+    </h2>
 
     <p id="cakeMessage">
       Before you go… there's one tiny birthday thing left. ❤️
     </p>
 
-    <div id="countdown" class="countdown"></div>
+    <div
+      id="countdown"
+      class="countdown">
+    </div>
 
-    <div id="cakeArea" class="cake-area">
+    <div
+      id="cakeArea"
+      class="cake-area"
+    >
 
       <div class="candle one">
         <div class="flame"></div>
@@ -1025,7 +1521,9 @@ Ummmah 😘❤️
 
     </div>
 
-    <p id="blowText" class="blow">
+    <p
+      id="blowText"
+      class="blow">
       Now blow the candles! 💨❤️
     </p>
 
@@ -1044,16 +1542,25 @@ Ummmah 😘❤️
     </button>
 
   </div>
+
 </section>
 
 
-<!-- PAGE 16 -->
+<!-- =========================
+     PAGE 16
+========================= -->
+
 <section class="page">
+
   <div class="content">
 
-    <div class="final-heart">❤️</div>
+    <div class="final-heart">
+      ❤️
+    </div>
 
-    <h1>Happy Birthday, Thangam!</h1>
+    <h1>
+      Happy Birthday, Thangam!
+    </h1>
 
     <img
       src="fav.jpeg"
@@ -1090,27 +1597,44 @@ Ummmah 😘❤️
     </div>
 
   </div>
+
 </section>
 
 
-<!-- PROGRESS DOTS -->
-<div class="progress" id="progress"></div>
+<!-- =========================
+     PROGRESS DOTS
+========================= -->
+
+<div
+  class="progress"
+  id="progress">
+</div>
 
 
 <script>
 
+/* =========================
+   PAGE SYSTEM
+========================= */
+
 let currentPage = 0;
-const pages = document.querySelectorAll(".page");
-const progress = document.getElementById("progress");
+
+const pages =
+  document.querySelectorAll(".page");
+
+const progress =
+  document.getElementById("progress");
 
 let cakeStarted = false;
 let finalDone = false;
 
 
 /* Create progress dots */
+
 pages.forEach((page, index) => {
 
-  const dot = document.createElement("div");
+  const dot =
+    document.createElement("div");
 
   dot.className = "dot";
 
@@ -1125,7 +1649,8 @@ pages.forEach((page, index) => {
 
 function updateProgress() {
 
-  const dots = document.querySelectorAll(".dot");
+  const dots =
+    document.querySelectorAll(".dot");
 
   dots.forEach((dot, index) => {
 
@@ -1147,7 +1672,8 @@ function showPage(index) {
 
   currentPage = index;
 
-  pages[currentPage].classList.add("active");
+  pages[currentPage]
+    .classList.add("active");
 
   updateProgress();
 
@@ -1156,8 +1682,16 @@ function showPage(index) {
     behavior: "smooth"
   });
 
-  if (currentPage === 14 && !cakeStarted) {
+
+  /* Start cake countdown */
+
+  if (
+    currentPage === 14 &&
+    !cakeStarted
+  ) {
+
     startCakeCountdown();
+
   }
 
 }
@@ -1165,17 +1699,37 @@ function showPage(index) {
 
 function nextPage() {
 
-  if (currentPage < pages.length - 1) {
-    showPage(currentPage + 1);
+  if (
+    currentPage <
+    pages.length - 1
+  ) {
+
+    showPage(
+      currentPage + 1
+    );
+
   }
 
 }
 
 
-/* Page 2 */
-function notReady() {
+/* =========================
+   PAGE 2
+========================= */
 
-  const text = document.getElementById("notReadyText");
+function readyYes() {
+
+  nextPage();
+
+}
+
+
+function readyNo() {
+
+  const text =
+    document.getElementById(
+      "notReadyText"
+    );
 
   text.innerHTML =
     "Too late 😂❤️ You're already inside. Click YES!";
@@ -1183,37 +1737,74 @@ function notReady() {
 }
 
 
-/* Page 3 */
+/* =========================
+   PAGE 3
+========================= */
+
 function favouriteYes() {
 
-  document.getElementById("favouriteText").innerHTML =
+  const text =
+    document.getElementById(
+      "favouriteText"
+    );
+
+  text.innerHTML =
     "I knew it. 😌❤️ That's the only correct answer.";
+
+  setTimeout(() => {
+    nextPage();
+  }, 900);
 
 }
 
 
 function favouriteNo() {
 
-  document.getElementById("favouriteText").innerHTML =
+  const text =
+    document.getElementById(
+      "favouriteText"
+    );
+
+  text.innerHTML =
     "Excuse me?! 😒😂 Try again, mayileyyy.";
 
+  setTimeout(() => {
+    nextPage();
+  }, 1200);
+
 }
 
 
-/* Letter */
+/* =========================
+   LETTER
+========================= */
+
 function openLetter() {
 
-  const letter = document.getElementById("letter");
+  const letter =
+    document.getElementById(
+      "letter"
+    );
 
-  letter.classList.toggle("open");
+  letter.classList.toggle(
+    "open"
+  );
 
 }
 
 
-/* Final question */
+/* =========================
+   FINAL QUESTION
+========================= */
+
 function finalQuestion() {
 
-  document.getElementById("finalAnswer").innerHTML =
+  const answer =
+    document.getElementById(
+      "finalAnswer"
+    );
+
+  answer.innerHTML =
     "Good. Because you're stuck with me. 😌❤️";
 
   setTimeout(() => {
@@ -1223,112 +1814,146 @@ function finalQuestion() {
 }
 
 
-/* Cake countdown */
+/* =========================
+   CAKE COUNTDOWN
+========================= */
+
 function startCakeCountdown() {
 
   cakeStarted = true;
 
   const countdown =
-    document.getElementById("countdown");
+    document.getElementById(
+      "countdown"
+    );
 
   const title =
-    document.getElementById("cakeTitle");
+    document.getElementById(
+      "cakeTitle"
+    );
 
   const message =
-    document.getElementById("cakeMessage");
+    document.getElementById(
+      "cakeMessage"
+    );
 
   let number = 3;
 
-  countdown.innerHTML = number;
+  countdown.innerHTML =
+    number;
 
-  const timer = setInterval(() => {
 
-    number--;
+  const timer =
+    setInterval(() => {
 
-    if (number > 0) {
+      number--;
 
-      countdown.innerHTML = number;
+      if (number > 0) {
 
-    } else {
+        countdown.innerHTML =
+          number;
 
-      clearInterval(timer);
+      }
 
-      countdown.innerHTML = "🎂";
+      else {
 
-      title.innerHTML =
-        "Make a wish, Thangam! 🥹❤️";
+        clearInterval(timer);
 
-      message.innerHTML =
-        "Your birthday cake is waiting…";
+        countdown.innerHTML =
+          "🎂";
 
-      document
-        .getElementById("cakeArea")
-        .classList.add("show");
+        title.innerHTML =
+          "Make a wish, Thangam! 🥹❤️";
 
-      document
-        .getElementById("blowText")
-        .classList.add("show");
+        message.innerHTML =
+          "Your birthday cake is waiting…";
 
-      document
-        .getElementById("blowButton")
-        .classList.add("show");
+        document
+          .getElementById(
+            "cakeArea"
+          )
+          .classList.add("show");
 
-    }
+        document
+          .getElementById(
+            "blowText"
+          )
+          .classList.add("show");
 
-  }, 1000);
+        document
+          .getElementById(
+            "blowButton"
+          )
+          .classList.add("show");
+
+      }
+
+    }, 1000);
 
 }
 
 
-/* Blow candles */
+/* =========================
+   BLOW CANDLES
+========================= */
+
 function blowCandles() {
 
-  if (finalDone) return;
+  if (finalDone)
+    return;
 
   finalDone = true;
+
 
   document
     .querySelectorAll(".flame")
     .forEach(flame => {
-      flame.classList.add("off");
+
+      flame.classList.add(
+        "off"
+      );
+
     });
 
-  document.getElementById("blowButton")
+
+  document
+    .getElementById(
+      "blowButton"
+    )
     .style.display = "none";
 
-  document.getElementById("blowText")
+
+  document
+    .getElementById(
+      "blowText"
+    )
     .innerHTML =
       "Wish made. Candles out. Birthday officially started! 🥹❤️";
 
-  document.getElementById("cakeTitle")
+
+  document
+    .getElementById(
+      "cakeTitle"
+    )
     .innerHTML =
       "Happy Birthday, Thangam! ❤️";
 
-  document.getElementById("cakeMessage")
+
+  document
+    .getElementById(
+      "cakeMessage"
+    )
     .innerHTML =
       "Your birthday officially begins now. 🎂✨";
 
-  document.getElementById("continueButton")
+
+  document
+    .getElementById(
+      "continueButton"
+    )
     .classList.add("show");
 
 }
-
-
-/* Keyboard navigation */
-document.addEventListener("keydown", function(event) {
-
-  if (event.key === "ArrowRight") {
-    nextPage();
-  }
-
-  if (
-    event.key === "ArrowLeft" &&
-    currentPage > 0
-  ) {
-    showPage(currentPage - 1);
-  }
-
-});
 
 </script>
 
